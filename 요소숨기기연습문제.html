@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소 숨기기 연습문제</title>
+  <style>
+    /* 문제1. "이 텍스트는 숨겨져야 합니다." 문구를 숨겨주세요*/
+    .hidden{
+      visibility: hidden;
+    }
+    /* 문제2 display속성을 사용 */
+    .box{
+      display: none;
+    }
+    /* 문제3 .overlay클래스를 가진 요소의 배경을 반투명하게 만들고,
+              텍스트의 투명도를 75%로 설정하세요 */
+    .overlay {
+	    line-height:4;
+	    text-align:center;
+      /* 배경색의 투명도를 변경하려면 rgba()를 사용하거나, hex코드를 사용해야 한다 */
+      background-color: rgba(255,200,0,0.5);  /* rgba(red, green, blue, 투명도) */
+      background-color: #ffcc0088;  /* #red, green, blue, alpha */
+    }
+    .overlay .text{opacity: 0.75;}
+  </style>
+</head>
+<body>
+
+  <h2>문제1. "이 텍스트는 숨겨져야 합니다." 문구를 숨겨주세요</h2>
+  <div class="container">
+    <p class="text">이 텍스트는 보입니다.</p>
+    <p class="hidden">이 텍스트는 숨겨져야 합니다.</p>
+  </div>
+
+  <h2>문제2. 요소 제거하기(숨기기) </h2>
+  <div class="box">이 박스는 보입니다.</div>
+
+  <h2>문제3. 투명도와 기시성 조절</h2>
+  <div class="overlay">
+    <p class="text">이 텍스트는 배경 위에 있습니다.</p>
+  </div>
+  
+</body>
+</html>

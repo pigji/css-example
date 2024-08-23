@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display 속성</title>
+  <style>
+    /* .container1 요소의 자식요소인 span요소를 선택 */
+    .container1>span{
+      background-color: gold;
+      display: none;  /*  none값을 주었기 때문에 요소가 화면에서 사라짐 */
+      display: inline;
+      /* 요소의 display속성을 inline로 변경 
+          width, height, margin, padding 속성을 적용할 수 없다 */
+      width: 300px;
+      height: 50px;
+      margin: 10px; /* 바깥여백 */
+    }
+    /* .container1의 후손(자손포함)인 #box1을 선택 */
+    .container1 #box1{
+      display: inline-block;  /* width, height, margin, padding을 적용할 수 있다 */
+    }
+    .container1 #box2{
+      display: block; /* 초기 넓이값이 100%로 선정되기 때문에 밑줄로 넘어간다 */
+      width: auto;  /* block요소의 초기 width 값*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <span>display:inline</span>
+    <span id="box1">display:inline-block</span>
+    <span id="box2">display:block</span>
+  </div>
+</body>
+</html>

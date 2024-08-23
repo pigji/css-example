@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>visivility 속성</title>
+  <style>
+    .container .box{
+      width: 200px;
+      height: 100px;
+      background-color: lightcoral;
+      color: white; /* #fff와 같음 */
+      line-height: 100px;
+      text-align: center;
+    }
+    .visible{
+      visibility: visible;  /* 화면에 표시함 */
+    }
+    .hidden{
+      visibility: hidden; /* 화면에서 가려줌 : 눈에 보이지 않지만 공간은 차지하고 있음 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box hidden">hidden</div>
+    <div class="box visible">visible</div>
+  </div>
+</body>
+</html>
