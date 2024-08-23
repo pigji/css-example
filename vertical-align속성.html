@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vertical-align속성</title>
+  <style>
+    /* inline요소나 table의 셀 안에서 수직정렬을 지정한다. */
+    p{
+      border: 1px dashed black;
+      font-size: 3em; /* em : 기본 폰트의 배수로 커짐 */
+    }
+    span{
+      font-size: small; /* small : 작은폰트로 표현할때 사용 */
+    }
+    .baseline{
+      vertical-align: baseline; /* 텍스트의 baseline을 기준으로 정렬(기본 값) */
+    }
+    .sub{ vertical-align: sub;} /* 아래 첨자로 표현 */
+    .super{ vertical-align: super;} /* 윗 첨자로 표현 */
+    .top{ vertical-align: top;} /*  해당 줄의 가장 높은 요소를 기준으로 맨 위에 정렬 */
+    .text-top{ vertical-align: text-top;} /* 부모 요소의 글자를 기준으로 맨 위에 정렬 */
+    .middle{ vertical-align: middle;} /* 부모 요소의 글자를 기준으로 가운데 정렬 */
+    .bottom{ vertical-align: bottom;} /* 해당 줄의 가장 낮은 요소를 기준으로 맨 아래 정렬 */
+    .text-bottom{ vertical-align: text-bottom;} /* 부모 요소의 글자를 기준으로 맨 아래 정렬 */
+    .per{ vertical-align: 50%;} /* %단위 만큼 위로 올라감 */
+    .size{ vertical-align: 1em;}  /* 16px만큼 위로 올라감(값이 클수록 위로 올라감) */
+  </style>
+</head>
+<body>
+  <!-- vertical-align에 적용할 수 있는 속성 값(inline요소에 쓰이는 속성 ) -->
+  <p> CSS
+    <span class="baseline">baseline</span>
+    <span class="sub">sub</span>
+    <span class="super">super</span>
+    <span class="top">top</span>
+    <span class="text-top">text-top</span>
+    <span class="middle">middle</span>
+    <span class="bottom">bottom</span>
+    <span class="text-bottom">text-bottom</span>
+    <span class="per">50%</span>
+    <span class="size">1em</span>    
+</p>
+</body>
+</html>
