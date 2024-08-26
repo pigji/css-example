@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최소/최대 크기 속성 연습문제3</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      .banner-container {
+        text-align: center;
+        padding: 20px;
+      }
+      /* 문제3. 배너 이미지 레이아웃 */
+      .banner-image{
+        width: 100%;
+        height: auto;
+        /* 요소의 넓이를 300~600px 사이로 동적으로 적용 */
+        min-width: 300px;
+        max-width: 600px;
+       /* 요소의 높이를 200~400px 사이로 동적으로 적용 */
+        min-height: 200px;
+        max-height: 400px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner-container">
+      <img src="https://picsum.photos/800/400" alt="Banner Image" class="banner-image"/>
+    </div>
+  </body>
+</html>

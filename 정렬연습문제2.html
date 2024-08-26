@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>정렬 연습문제2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Verdana, Geneva, sans-serif;
+      }
+      .wrap {
+        background-color: olive;
+        color: #fff;
+        height: 250px;
+      }
+      /* TITLE을 .wrap요소의 가운데로 정렬하시오 */
+      h1 {
+        font-size: 40px;
+        /* 글자 가운데정렬*/
+        text-align: center;
+        vertical-align: middle; /* 인라인 영역에서 가로 가운데정렬 */
+        /*line-height: 250px;  방법1)line-height로 세로 가운데정렬 */
+        /*margin-top: 100px;*/
+
+        /* 방법2) 현재는 padding을 적용해서 여백을 주면 됩니다 */
+        padding-top: 100px;
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        border: 5px solid red;
+        /* margin: 50px; */
+        /* 인접해있는 요소의 margin의 작은 값은 상쇄되고 큰 값만 적용된다 */
+        /* 자식요소에 margin-top을 적용하면 부모요소에 margin-top을 적용한 것처럼 랜더링 됩니다 */
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>TITLE</h1>
+    </div>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+  </body>
+</html>
