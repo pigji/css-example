@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가시속성 연습문제2</title>
+  <style>
+    section{font-size: 5rem;}
+
+    /* 1. section의 자식은 a태그의 다음형제인 div */
+    section > a + div{
+      display: none;
+    }
+    /* section의 자식요소인 a에 마우스를 올리면 그 다음 형제요소인 div의 display를 block으로 설정한다 */
+    section > a:hover + div{
+      display: block;
+    }
+
+    /* 2. id */
+  </style>
+</head>
+<body>
+  <section>
+    <a href="#">버튼</a>
+    <div id="box1">안녕</div>
+    <div id="box2">잘가</div>
+  </section>
+  
+  <!-- 방법1 형제 선택자 -->
+  <!-- 방법2 : id 또는 class 값을 줌 -->
+</body>
+</html>

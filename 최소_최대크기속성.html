@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최소/최대 크기 속성</title>
+
+  <style>
+    body{
+      font-family: Arial; /* 글씨체 */
+      /* 여백 */
+      margin: 0;
+      padding: 0;
+      /* 배경을 반투명하게 설정 */
+      background-color: rgba(0,0,0,0.5);
+      /* 인라인요소 가운데 정렬 */
+      text-align: center;
+    }
+    .container{
+      max-width: 1000px;  /* 컨테이너의 최대넓이를 1000px로 설정 */
+      background-color: gold;
+      padding: 20px;  /* 요소 안쪽으로 여백지정 */
+    }
+    .box{
+      background-color: lightcoral;
+      color: white;
+      line-height: 100px;
+      /* 테두리 둥굴게 표현 */
+      border-radius: 8px;
+      margin: 10px; /* 요소 바깥쪽으로 여백지정 */
+    }
+
+    .box1{
+      min-width: 200px; /* 최소넓이 */
+      max-width: 400px; /* 최대넓이 */
+      width: 80%; /* 뷰포트 넓이의 80%크기로 width설정 */
+      height: 100px;
+    }
+    .box2{
+      width: 80%;
+      height: 50vh; /* 뷰포트 높이의 50%크기로 설정 */
+      min-height: 100px;  /* 100px이하로 줄어들지 않음 */
+      max-height: 200px;  /* 200px이상으로 늘어나지 않음 */
+    }
+    .box3{
+      width: 80%;
+      height: 100vh;
+      min-width: 150px;
+      max-width: 300px;
+      min-height: 150px;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 젠코딩 : div.container>div.box.box$*3 -->
+    <!-- class가 container인 자식의 div태그 class가 box 3개 생성-->
+  <div class="container">
+    <div class="box box1">min-width / max-width</div> <!-- 최소/최대 너비 -->
+    <div class="box box2">min-height / max-height</div> <!-- 최소/최대 높이 -->
+    <div class="box box3">min and max widht/hight</div>
+  </div>
+</body>
+</html>
