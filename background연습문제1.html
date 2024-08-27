@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background 연습문제1</title>
+  <style>
+    /*문제1*/
+    .background-single {
+      width:100%;
+      height:400px;
+      background-image: url(https://picsum.photos/id/1/800/600);
+      background-size: cover; /*이미지가 전체를 덮도록 설정*/
+      background-position: center;
+    }
+
+    /*문제2*/
+    .background-color-image {
+      width:100%;
+      height:400px;
+      background-image: url(https://picsum.photos/id/22/800/600 );
+      background-color: rgba(255, 0, 0, 0.3);
+      background-blend-mode: multiply;  /*이미지와 배경색 혼합(값을 overlay 해도 동일하게 나옴)*/
+    }
+    
+    /*문제3*/
+    .background-multiple {
+      width:100%;
+      height:400px;
+      background-image: url(bg_image/Thanks.png), url(bg_image/bokeh.jpg);
+      background-repeat: no-repeat; /*반복 배경 없음*/
+      background-position: center, top left;
+      background-size: 200px, cover;
+    }
+  </style>
+</head>
+<body>
+  <h2>문제1. 단일배경 이미지설정</h2>
+  <div class="background-single"></div>
+
+  <h2>문제2. 배경 이미지와 색상혼합</h2>
+  <div class="background-color-image"></div>
+
+  <h2>문제3. 여러 배경 이미지 사용</h2>
+  <div class="background-multiple"></div>
+
+</body>
+</html>

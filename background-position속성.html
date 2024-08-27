@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-position 속성</title>
+  <style>
+    div{
+      background-color: #fe9;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 80px;
+      margin-bottom: 12px;
+    }
+    .one{
+      background-image: url(bg_image/spot.png);
+      background-position: 10px bottom; /*x축 y축*/
+      /*축약형*/
+      background: url(bg_image/spot.png) #fe9 no-repeat 10px bottom;
+    }
+
+    .two{
+      background-image: url(bg_image/spot.png);
+      background-position: 3em 50%; /*x축 y축*/
+    }
+
+    /*여러 배경 이미지*/
+    .three{
+      /*여러 배경 이미지와 위치속성을 쉼표로 구분해서 설정한다*/
+      background-image:url(bg_image/spot.png), url(bg_image/logo.png);
+      background-position: 0 0, center;
+    }
+  </style>
+</head>
+<body>
+  <div class="one">example one</div>
+  <div class="two">example two</div>
+  <div class="three">example three</div>
+</body>
+</html>

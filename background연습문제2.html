@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background 연습문제2</title>
+  <style>
+    /*초기화*/
+    *{margin:0; padding:0;}
+    
+    /*배경이미지 속성*/
+    .image{
+      width: 100%;
+      min-width: 800px; /*넓이 최소 800px 설정*/
+      height: 640px;
+      background-image: url(bg_image/background-image.jpg);
+      background-position: center;
+      background-size: cover; /*요소 안에 배경이미지를 가득 채워줌*/
+      overflow: hidden; /*자식요소의 margin-top이 자식요소한테만 적용*/
+    }
+    .box{
+      width: 540px;
+      height: 240px;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #333;
+      border-radius: 40px;
+      text-align: center;
+      margin: 120px auto 0; /*안쪽여백을 설정하고 width와 height값 안으로 padding을 넣어준다*/
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    .box>h1{
+      font-family: "휴먼둥근헤드라인";
+      font-size: 42px;
+      line-height: 1.4em;
+    }
+    .box>p{
+      font-family: "맑은 고딕";
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="image">
+    <div class="box">
+      <h1>전좌석 안전띠 착용,<br>
+        옵션이 아닌 필수입니다.
+      </h1>
+      <p>5년간 1,300명 안전띠 미착용으로 사망!</p>
+    </div>
+  </div>
+</body>
+</html>
