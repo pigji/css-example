@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>white-space속성</title>
+  <style>
+    div{
+      width: 400px;
+      border: 10px solid red;
+      /* 
+        rem의 r은 root를 의미
+        최상위 요소의 속성값을 기준으로 배수로 적용(반응형 제작할때 주로 사용)
+      */
+      font-size: 2rem;
+      /* 줄바꿈 금지(기본값= warp:줄바꿈 허용) */
+      white-space:nowrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- 더미 텍스트 : lorem 입력 후 Tab -->
+  <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Itaque laboriosam fuga iure maiores recusandae aut amet autem sit inventore quo eum
+    laborum perspiciatis ullam a, aliquam deserunt architecto error mollitia.</div>
+</body>
+</html>

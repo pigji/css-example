@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow 연습문제</title>
+    <style>
+      /*문제1*/
+      .content {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        overflow: scroll;
+      }
+      /*문제2*/
+      .scroll-box {
+        width: 300px;
+        height: 100px;
+        border: 1px solid #000;
+        /* 콘텐츠가 넘칠 경우 스크롤바 표시 */
+        overflow: auto;
+      }
+      /*문제3*/
+      .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #000;
+        /* 넘치는 부분을 숨김 */
+        overflow: hidden;
+      }
+      .child {
+        width: 300px;
+        height: 150px;
+        background-color: lightblue;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>문제1. 스크롤 생성하세요.</h2>
+    <div class="content">lorem*3</div>
+    <br />
+
+    <h2>
+      문제2. scroll-box 콘텐츠가 넘치면 자동으로 스크롤바가 표시되도록 CSS를
+      작성하세요.
+    </h2>
+    <div class="scroll-box">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt
+      recusandae, non perspiciatis sequi quae consequuntur nostrum, eligendi
+      aut, deserunt iste laborum officia soluta quo dignissimos deleniti
+      blanditiis dolorem nihil. Placeat obcaecati repellendus consequuntur qui
+      veniam amet omnis! Assumenda iusto, suscipit accusamus laborum molestiae
+      error iste quae molestias ducimus doloribus modi excepturi beatae dolorum
+      aliquid doloremque atque laboriosam vero maiores! Nostrum, porro beatae
+      quas dolorum fugit quo perferendis iure? Tempora debitis maiores fuga
+      voluptatem et sit consequatur? Vel unde maxime facere, repudiandae
+      mollitia facilis quibusdam autem quo alias nesciunt cumque.
+    </div>
+    <br />
+
+    <h2>
+      문제3. 자식 요소가 부모 요소의 경계를 넘어서는 경우, 넘치는 부분이 숨겨지도록 CSS를 작성하세요.</h2>
+    <div class="box">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+    </div>
+  </body>
+</html>

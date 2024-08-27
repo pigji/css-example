@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing 연습문제</title>
+    <style>
+      /* 공통 스타일 */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      /* 문제 1번: .container를 선택, 넓이를 500px로 설정하고 가운데 정렬 */
+      .container{
+        width: 500px;
+        margin: 0 auto; /*블럭요소 가운데정렬*/
+      }
+      /* 문제 2번: .box의 넓이 200px, 높이 150px, 각 .box사이의 여백 20px,
+          글자색 흰색, 글자크기 16px, 글자를 .box의 높이와 맞춰서 수직 가운데 정렬 */
+      .box{
+        width: 200px;
+        height: 150px;
+        color: white;
+        font-size: 16px;
+        line-height: 150px;
+      }
+      .box1 {
+        background-color: #3498db; /* 파란색 */
+      }
+      .box2 {
+        background-color: #2ecc71; /* 초록색 */
+        padding: 10px;
+        border: 5px solid black;
+        box-sizing: border-box;
+        margin: 20px 0; /* box2번의 상하 여백을 20px로 설정 */
+      }
+      .box3 {
+        background-color: #e74c3c; /* 빨간색 */
+        padding: 10px;
+        border: 10px solid black;
+        line-height: normal;  /* 행간을 초기화 */
+        box-sizing: border-box;
+      }
+      .box3 img {
+        /*문제 3번: 이미지가 박스의 너비를 채우도록 설정합니다. */
+        width: 100%;
+        height: 100px;
+        object-fit: cover;  /* 이미지요소의 비율을 유지하면서 여백 없이 가득 채웁니다 -> 이미지 찌그러짐 방지 */
+      }
+      /* 문제 4번: width, padding, border를 변경하지 않고,
+        각 box요소가 차지하는 넓이가 동일하게 설정되도록 만들어 보세요. */
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+      <div class="box box3">
+        <img src="https://picsum.photos/300/200" alt="Example Image"/>
+        <p>Box 3 with an image</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-sizing속성 2</title>
+  <style>
+    .container{
+      width: 300px;
+      border: 1px solid red;
+      background-color: #ababab;
+    }
+    .box1{
+      width: 100%;
+      background-color: skyblue;
+      border: 10px solid black;
+      box-sizing: content-box;  /*기본값*/
+      /*
+        요소의 넓이가 100%(요소가 차지할 수 있는 최대 넓이)에서 테두리 10px만틈 추가되어
+        부모 요소보다 커짐 -> 결과적으로 레이아웃이 무너집니다.
+      */
+    }
+    .box2{
+      width: 100%; /* block요소는 넓이를 기본적으로 100%를 차지하기 때문에 생략해도 된다. */
+      background-color: lightgreen;
+      border: 10px solid blue;
+      box-sizing: border-box;
+      /* box-sizing속성을 border-box로 설정하면 width:100%에 border가 포함되어
+      결과적으로 width가 100% 이상으로 늘어나지 않는다. -> 레이아웃 무너짐을 방지
+      */
+    }
+  </style>
+</head>
+<body>
+  <!-- 젠코딩 : .container>.box${box$}*2 -->
+  <div class="container">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+  </div>
+</body>
+</html>
