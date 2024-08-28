@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 속성</title>
+  <style>
+    /*float속성을 적용한 자식요소의 높이를 부모요소에 인식시키는 방법*/
+    .parent{
+      background-color: #ccc;
+      /* height: 200px; 부모요소에 높이를 주는 방법*/
+      
+      overflow: hidden;
+      /* float속성이 적용된 자식요소의 높이를 인식시킴*/
+    }
+    .parent>.child{
+      width: 200px;
+      height: 200px;
+      float: left;
+    }
+    .parent>.ch1{
+      background-color: #fc0;
+    }
+    .parent>.ch2{
+      background-color: #f60;
+    }
+    .parent>.ch3{
+      background-color: #f00;
+    }
+    .uncle{
+      width: 200px;
+      height: 200px;
+      background-color: #00f;
+      color: #333;
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child ch1">A</div>
+    <div class="child ch2">B</div>
+    <div class="child ch3">C</div>
+    <!--이 속성은 float를 해제하여 새롭게 줄바꿈을 시작해 줍니다-->
+    <!-- <div style="clear:both"></div> -->
+  </div>
+  <div class="uncle">삼촌</div>
+</body>
+</html>
