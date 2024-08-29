@@ -21,8 +21,8 @@
       /* 축약형 : x/y축으로 100px 이동*/
       transform: translate(100px, 100px);
     }
-
-    /*크기 속성*/
+    
+    /*크기 속성 : scale*/
     .box2{
       /*x축으로 1.5배 확대*/
       transform: scaleX(1.5);
@@ -31,7 +31,30 @@
       /*x/y축으로 1.5배 확대*/
       transform: scale(1.5);
     }
-  </style>
+
+    /*회전 속성 : rotate*/
+    .box3{
+      /*x축으로 45도 회전*/
+      transform: rotateX(45deg);  /*deg:각도를 의미*/
+      /*y축으로 45도 회전*/
+      transform: rotateY(45deg);
+      /*z축으로 45도 회전*/
+      transform: rotateZ(45deg);
+    }
+
+    /*기울기 속성 : skew*/
+    .box4{
+      /*x축으로 20도 기울이기*/
+      transform: skewX(20deg);  /*deg:각도를 의미*/
+      /*y축으로 20도 기울이기*/
+      transform: skewY(20deg);
+    }
+    
+    /*여러 변형 조합*/
+    .box5{
+      transform: translateX(50px) rotate(30deg) scale(1.1);
+    }
+    </style>
 </head>
 <body>
   <div class="box box1"></div>
