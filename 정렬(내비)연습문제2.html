@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정렬(내비)연습문제2</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    nav{
+      min-width: 1200px;
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;  /*글씨 두껍게*/
+      padding: 40px 0;
+    }
+    nav>.container{
+      width: 1200px;
+      margin: 0 auto;
+      overflow: auto; /*float속성을 적용한 자식요소의 높이를 인식함(자식요소의 높이를 인식하기 위해 사용)*/
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .container>ul{
+      float: left;
+    }
+    .container>ul>li{
+      float: left;
+      margin-right: 60px;
+    }
+    .container>.logo{
+      float: right;
+      
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#">SHAMMAH</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="logo">  <!--이미지-->
+        <a href="#">
+          <img src="bg_image/search.png" alt="search">
+        </a>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>

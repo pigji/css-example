@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정렬(내비) 연습문제1</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;} /*inherit : 부모요소를 상속받겠다는 의미*/
+
+    nav{
+      background-color: orange;
+      min-width: 1200px;
+    }
+    nav>.container{
+      width: 1200px;
+      margin: 0 auto;
+      overflow: auto; /*float속성을 적용한 자식요소의 높이를 인식함*/
+      color: white;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .container>.logo{
+      float: left;  /*왼쪽에 위치하도록 설정*/
+      line-height: 40px;  /*40px 안에서 자동정렬*/
+    }
+    .container>ul{
+      float: right; /*오른쪽에 위치하도록 설정*/
+    }
+    .container>ul>li{
+      float: left;
+      margin-left: 60px;
+      line-height: 40px;  /*40px 안에서 자동정렬*/
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1 class="logo"><a href="#">SHAMMAH</a></h1>
+      <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>

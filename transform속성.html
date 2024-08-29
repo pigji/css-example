@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform 속성</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border: 1px solid black;
+      margin-bottom: 50px;
+    }
+    /*위치속성 : translate*/
+    .box1{
+      /*x축으로 100px 이동*/
+      transform: translateX(100px);
+      /*y축으로 100px 이동*/
+      transform: translateY(100px);
+      /* 축약형 : x/y축으로 100px 이동*/
+      transform: translate(100px, 100px);
+    }
+
+    /*크기 속성*/
+    .box2{
+      /*x축으로 1.5배 확대*/
+      transform: scaleX(1.5);
+      /*y축으로 1.5배 확대*/
+      transform: scaleY(1.5);
+      /*x/y축으로 1.5배 확대*/
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+  <div class="box box4"></div>
+  <div class="box box5"></div>
+</body>
+</html>

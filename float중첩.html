@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩된 float</title>
+  <style>
+    .big-area{
+      width: 100px;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #999;
+      float: left;
+    }
+    .small-unit{
+      width: 48px;
+      height: 48px;
+      background-color: #333;
+      color: white;
+      margin: 1px;
+      float: left;
+    }
+    /*float속성이 적용된 부모요소에 높이를 지정하지 않아도 float속성이 적용된 자식요소의 높이를 인식한다*/
+  </style>
+</head>
+<body>
+  <!-- 젠코딩 : .big-area*2>.small-unit*4 -->
+  <div class="big-area">
+    <div class="small-unit">A</div>
+    <div class="small-unit">B</div>
+    <div class="small-unit">C</div>
+    <div class="small-unit">D</div>
+  </div>
+  <div class="big-area">
+    <div class="small-unit">1</div>
+    <div class="small-unit">2</div>
+    <div class="small-unit">3</div>
+    <div class="small-unit">4</div>
+  </div>
+</body>
+</html>
