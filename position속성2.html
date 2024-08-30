@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position 속성</title>
+  <style>
+    nav{
+      width: 500px;
+      border: 10px solid red;
+    }
+    nav>img, section>img{
+      display: block; /*img요소에 하단여백을 제거하기 위해 설정*/
+    }
+    section{
+      width: 500px;
+      border: 5px solid red;
+      position: relative; /*유령의 집화*/
+    }
+    section>div{
+      font-size: 2rem;
+      background-color: gold;
+      position: absolute; /*유령화 = 유령화가 되면 유령의 집안에서 위치를 이동할 수 있다*/
+      bottom: 0;
+      right: 0;
+      display: none;  /*요소를 제거*/
+    }
+    /*section에 마우스를 올려놓으면 그 자식인 div요소가 나타남*/
+    section:hover >div{
+      display: block;
+    }
+
+    /*화면분할*/
+    article{
+      border: 10px solid blue;
+      width: 500px;
+      position: relative;
+    }
+    article>div{
+      font-size: 2rem;
+      background-color: gold;
+      position: absolute; /*유령화해서 공중에 띄움*/
+    }
+    article>div:nth-of-type(1){
+      top: 0;
+      bottom: 50%;
+      left: 0;
+      right: 50%;
+    }
+    article>div:nth-of-type(2){
+      top: 50%;
+      bottom: 0;
+      left: 50%;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="https://github.com/jmk255/source/blob/main/color1.png?raw=true" alt="">
+  </nav>
+  
+  <section>
+    <img src="https://github.com/jmk255/source/blob/main/color.png?raw=true" alt="">
+    <div>티셔츠</div>
+  </section>
+
+  <article class="s2">
+    <img src="https://github.com/jmk255/source/blob/main/color.png?raw=true" alt="">
+    <div>티셔츠</div>
+    <div>티셔츠</div>
+  </article>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition 속성</title>
+  <style>
+    div{
+      height: 100px;
+      background-color: #afafaf;
+      opacity: 0.3;
+      /*요소의 배경색이 변경되었을때 0.5초 동안 서서히 변경*/
+      transition: background-color .5s, width 0.5s;
+      width: 100%;  /*width값을 명확하게 지정해줘야 트렌지션이 된다*/
+    }
+    
+    /*div요소에 마우스를 올렸을때 적용되는 스타일*/
+    div:hover{
+      /*배경색을 2초동안 서서히 변경*/
+      background-color: gold;
+      transition: background-color 2s;
+
+      /*width에 트랜지션을 주었지만 효과가 적용되지 않는 이유 = div의 width가 auto이기 때문이다. width값을 명확하게 지정해줘야함*/
+      width: 50%;
+
+      /*opacity 트랜지션 적용*/
+      transition: background-color 2s, width 2s, opacity 2s;
+      opacity: 1;
+
+      /*all = 모든 속성의 트렌지션을 적용*/
+      transition: all 2s;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <br>
+  <div></div>
+</body>
+</html>
