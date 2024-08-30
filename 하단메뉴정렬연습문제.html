@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하단메뉴 정렬 연습문제</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: white;}
+
+    .container{
+      /*브라우저 100% 크기로 설정*/
+      width: 100%;
+      height: 100vh;
+      background-image: url(bg_image/logo.png), url(bg_image/bg.png);
+      background-repeat: no-repeat; /*반복이미지 없음*/
+      background-size: 200px, cover;
+      background-position: center, center;  /*이미지 가운데정렬*/
+      position: relative; /* 유령의 집화 : 유령화된 자식요소를 안쪽에서 정렬*/
+    }
+    nav{
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: navy;
+      text-align: center;
+    }
+    nav > ul > li{
+      display: inline-block;  /*옆으로 나란히 정렬(가운데정렬)*/
+      line-height: 40px;
+      margin: 0 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#">about</a></li>
+        <li><a href="#">news</a></li>
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">board</a></li>
+        <li><a href="#">album</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
