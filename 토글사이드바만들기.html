@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토글 사이드바</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    .side-bar{
+      width: 300px;
+      height: 100%;
+      background-color: #afafaf;
+      position: absolute;
+      left: -270px; /*뷰포트 왼족 밖으로 270px만큼 이동*/
+      /*변환효과*/
+      transition: left .3s, background-color .3s;
+      
+    }
+    .status-icon > div{
+      padding: 6px;
+      text-align: right;
+      /* background-color: red;  --> 영역 확인용 */
+    }
+    .status-icon > div:last-child{
+      /* background-color: green;  --> 영역 확인용 */
+      display: none;  /*아래방향 화살표 아이콘은 가려놓는다*/
+    }
+
+    /*마우스를 사이드바에 hover하면 사이드바가 뷰포트 안쪽으로 이동*/
+    .side-bar:hover{
+      left: 0;
+      background-color: black;
+      color: white;
+    }
+
+    /*마우스를 사이드에 hover하면 아래 화살표는 표시되고 오른쪽 화살표는 가려짐*/
+    .side-bar:hover > .status-icon > div:first-child{
+      display: none;
+    }
+    .side-bar:hover > .status-icon > div:last-child{
+      display: block;
+    }
+
+    /*nav*/
+    .menu-box{text-align: center;}
+    .menu-box > ul > li > a{
+      display: block;
+      padding: 10px;
+      font-weight: bold;
+    }
+    /*마우스 올렸을때 하이라이트 효과*/
+    .menu-box > ul > li > a:hover{
+      color: black;
+      background-color: white;
+    }
+    /*가상요소*/
+      /*only-child = 외동*/
+    .menu-box > ul > li > a:not(:only-child):after{
+      /*형제가 없는 요소는 제외하고 "[+]"를 붙임*/
+      content: " [+]";
+    }
+
+    /*메뉴에 마우스를 올리면 [+]를 [-]로 변경*/
+    .menu-box > ul > li:hover > a:not(:only-child)::after{
+      content: " [-]";
+    }
+
+    .sub1{display: none;}
+    /*1차 메뉴에 마우스를 올리면 2차메뉴가 나타남*/
+    .menu-box > ul > li:hover > .sub1{
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="side-bar">
+    <div class="status-icon">
+      <div>▶</div> <!--윈도우키 + .을 누르면 이모지 창이 뜸-->
+      <div>▼</div>
+    </div>
+    <!---nav 생성-->
+    <nav class="menu-box">
+      <ul>
+        <li>
+          <a href="#">1차 메뉴 아이템</a>
+          <ul class="sub1">
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">1차 메뉴 아이템</a>
+          <ul class="sub1">
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+          </ul>
+        </li>
+        <li><a href="#">1차 메뉴 아이템</a></li>
+        <li>
+          <a href="#">1차 메뉴 아이템</a>
+          <ul class="sub1">
+            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li><a href="#">2차 메뉴 아이템</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

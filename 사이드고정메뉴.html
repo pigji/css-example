@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사이드 고정메뉴 만들기</title>
+    <style>
+      /*초기화*/
+      * {margin: 0; padding: 0; list-style: none;
+      }
+      a {text-decoration: none; color: inherit;}
+
+      header, section, footer {
+        width: 1000px;
+        height: 900px;
+        margin: 0 auto;
+      }
+      header {background-color: yellow;}
+      section {background-color: lightgreen;}
+      footer {background-color: skyblue;}
+
+      /*고정메뉴(fixed)*/
+      .fixed_menu{
+        width: 80px;
+        background-color: #f8f8f8;
+        text-align: center;
+        font-size: 14px;
+        position: fixed;  /*고정메뉴로 설정*/
+        top: 100px;
+        /*콘텐츠 영역의 가운데를 중심으로 고정값으로 이동*/
+        left: 50%;
+        transform: translate(500px);  /*위치와 크기를 고정*/
+      }
+      .fixed_menu > .title{
+        width: 100%;
+        padding: 20px; /*height: 80pxpx 주는것과 같은 설정*/
+        box-sizing: border-box;
+        background-color: tomato;
+        color: white;
+        font-weight: bold;
+        user-select: none;  /*text 선택을 막아줌*/
+      }
+      .btn > li > a{
+        display: block;
+        width: 100%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        color: #333;
+      }
+      /*첫번재 li요소를 제외한 모든 li요소의 자식인 a요소를 선택*/
+      .btn > li+li > a{
+        border-top: 1px solid #999;
+      }
+      .top_btn{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: tomato;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;  /*텍스트 타입이지만 a태그와 같은 기능처럼 보이는 커서모양으로 변경(기능적용x)*/
+        user-select: none;  /*text 선택을 막아줌*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed_menu">
+      <!--이곳에 작성-->
+      <div class="title">Quick<br>MENU</div>
+      <ul class="btn">
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">MENU</a></li>
+      </ul>
+      <div class="top_btn">TOP</div>
+    </div>
+    <header></header>
+    <section></section>
+    <footer></footer>
+  </body>
+</html>
