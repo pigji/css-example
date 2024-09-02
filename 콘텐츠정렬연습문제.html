@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬 연습문제</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none; color: inherit;}
+
+    .container{
+      width: 1080px;  /*전체넓이*/
+      margin: 0 auto; /*가운데정렬*/
+      overflow: auto; /*클리어픽스핵*/
+    }
+    .box{
+      width: 540px;
+      float: left;  /*왼쪽으로 나란히 정렬*/
+      margin-bottom: 40px;
+    }
+    .box > img{
+      display: block;
+      float: left;
+      margin: 0 10px; /*좌우 10px 여백설정*/
+    }
+    .text{
+      width: 340px;
+      float: left;
+      margin: 0 10px;
+      color: #666;
+    }
+    h2{
+      font-size: 24px;
+      line-height: 1em;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 1.5em;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 젠코딩 : .container>.box*4>img+.text>h2+p+.icon>a*2>img -->
+  <div class="container">
+    <div class="box">
+      <img src="https://picsum.photos/160" alt="">
+      <div class="text">
+        <h2>Segment title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur,adipisicing elit.
+          Quaerat provident perspiciatis vel sapiente repellat voluptatibus!
+          aperiam ratione cum recusandae!</p>
+        <div class="icon">
+          <a href="#"><img src="bg_image/facebook_b.png" alt=""></a>
+          <a href="#"><img src="bg_image/pinterest_b.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/160" alt="">
+      <div class="text">
+        <h2>Segment title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur,adipisicing elit.
+          Quaerat provident perspiciatis vel sapiente repellat voluptatibus!
+          aperiam ratione cum recusandae!</p>
+        <div class="icon">
+          <a href="#"><img src="bg_image/facebook_b.png" alt=""></a>
+          <a href="#"><img src="bg_image/pinterest_b.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/160" alt="">
+      <div class="text">
+        <h2>Segment title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur,adipisicing elit.
+          Quaerat provident perspiciatis vel sapiente repellat voluptatibus!
+          aperiam ratione cum recusandae!</p>
+        <div class="icon">
+          <a href="#"><img src="bg_image/facebook_b.png" alt=""></a>
+          <a href="#"><img src="bg_image/pinterest_b.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/160" alt="">
+      <div class="text">
+        <h2>Segment title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur,adipisicing elit.
+          Quaerat provident perspiciatis vel sapiente repellat voluptatibus!
+          aperiam ratione cum recusandae!</p>
+        <div class="icon">
+          <a href="#"><img src="bg_image/facebook_b.png" alt=""></a>
+          <a href="#"><img src="bg_image/pinterest_b.png" alt=""></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

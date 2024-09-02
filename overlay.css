@@ -1,0 +1,50 @@
+/*초기화*/
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: inherit;}
+
+.container{
+  width: 1080px;
+  margin: 0 auto;
+  overflow: hidden; /*클리어픽스핵*/
+}
+.box{
+  /*애니메이션 효과*/
+  overflow: hidden; /*부모요솨 밖으로 콘텐츠가 넘어가면 가려줌*/
+
+  width: 250px;
+  height: 240px;
+  float: left;
+  margin: 0 10px; /*좌우 10px여백 설정*/
+  position: relative; /*유령의 집화 : 유령화된 자식요소들을 .box기준으로 정렬*/
+}
+.overlay{
+  position: absolute; /*유령화로 공주에 띄움*/
+  /*부모요소와 같은 크기로 겹치게 설정*/
+  left: 0; right: 0; top: 0; bottom: 0;
+  /*배경색 어둡게 설정*/
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px 20px;
+  /* box-sizing: border-box;
+    위치속성으로 영역의 크기를 설정하면서 box-sizing:border-box속성을 적용하지 않아도 크기가 커지지 않음 */
+    line-height: 1.5em;
+}
+.overlay > h2{font-size: 24px;}
+.overlay > p{font-size: 14px; margin: 20px 0}
+.overlay > .icon i{
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/*hover효과*/
+.overlay{
+  opacity: 0;
+  /* transform: scale(10) rotate(-720deg); */
+  transform: translateY(100%);  /*위로 나타나듯이 효과를 줌*/
+  transition: all 0.5s;
+}
+/*box에 마우스를 올리면 overlay가 나타남*/
+.box:hover > .overlay{
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
