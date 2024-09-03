@@ -1,0 +1,78 @@
+/*초기화*/
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: inherit;}
+
+#notice{
+  max-width: 1200px;  /*최대넓이 설정*/
+  min-width: 768px;   /*최소넓이 설정*/
+  width: 100%;
+  margin: 0 auto; /*가운데정렬*/
+  padding: 40px 20px; /*상하 40px , 좌우20px 여백설정*/
+  box-sizing: border-box; /*width 안으로 padding을 넣어줌(레이아웃 트러짐 방지)*/
+}
+#contice > h1{
+  font-size: 36px;
+  margin-bottom: 40px;  /*하단여백 설정*/
+}
+table{
+  width: 100%;  /*부모의 100% 크기로 넓이 설정*/
+  /*table요소의 안쪽 여백들을 제거*/
+  border-collapse: collapse;
+}
+th{
+  border-top: 2px solid #111;
+  border-bottom: 1px solid #111;
+  font-size: 16px;
+  height: 60px;
+}
+td{
+  border-bottom: 1px dotted #999;
+  font-size: 14px;
+  position: relative; /*가상요소를 td태그를 기준으로 정렬*/
+}
+td:first-child{
+  padding: 20px 0 20px 44px;  /*상좌하우 여백(시계방향)*/
+}
+td:last-child{
+  text-align: center; /*가운데정렬*/
+}
+/*가상요소 : 동그라미*/
+td:first-child::after{
+  content: "";  /*가짜속성*/
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #111;
+  border-radius: 50%; /*가상요소 동그랗게*/
+  
+  /*position: absolute를 정렬했을때 세로로 가운데 정렬*/
+  left: 20px;
+  top: 50%;   /*top:calc(50%-2px)과 같은 의미 : 자동 계산기로 계산되어 정렬됨*/
+  margin-top: -2px; /*transform:translateY(-2px); 와 같은 의미*/
+}
+
+/*페이지네이션*/
+.pagination{
+  min-width: 768px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center; /*가운데정렬*/
+  margin-top: 20px;
+}
+.pagination-wrap{
+  display: inline-block;
+}
+.pagination a{
+  float: left;
+  padding: 8px 16px;  /*상하 8px, 좌우 16px 여백설정*/
+}
+/*하이라이트 효과*/
+.pagination a.active{
+  background-color: seagreen;
+  color: #fff;
+}
+/*선택된 페이지 hover효과*/
+.pagination a:hover:not(.active){ /*active인 요소를 제외한 모든 a요소를 선택*/
+  background-color: #ddd;
+}

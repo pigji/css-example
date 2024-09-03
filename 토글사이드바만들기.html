@@ -75,6 +75,40 @@
       display: block;
     }
 
+    /*3차 메뉴*/
+    .sub2{
+      display: none;
+      position: absolute; /*유령의집화*/
+      top: 0;
+      left: 100%;
+      background-color: black;
+    }
+    /*2차메뉴에 마우스를 올리면 3차 메뉴가 나타남*/
+    .sub1 > li:hover > .sub2{
+      display: block;
+    }
+    /*3차메뉴가 있는 2차메뉴에 "[+]"추가*/
+    ul.sub1 > li > a:not(:only-child):after{
+      /*형제가 없는 요소는 제외하고 "[+]"를 붙임*/
+      content: " [+]";
+    }
+
+    /*메뉴에 마우스를 올리면 [+]를 [-]로 변경*/
+    ul.sub1 > li:hover > a:not(:only-child)::after{
+      content: " [-]";
+    }
+
+    /*2차메뉴의 아이템요소(li)을 유령의 집화해야 유령화된 3차메뉴를 정렬하기가 쉽다*/
+    .sub1 > li{
+      position: relative;
+    }
+
+    .sub2 > li >a{
+      display: block;
+      white-space: nowrap;  /*줄바꿈 방지*/
+      padding: 10px;
+    }
+
   </style>
 </head>
 <body>
@@ -89,7 +123,13 @@
         <li>
           <a href="#">1차 메뉴 아이템</a>
           <ul class="sub1">
-            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li>
+              <a href="#">2차 메뉴 아이템</a>
+              <ul class="sub2">
+                <li><a href="#">3차 메뉴 아이템</a></li>
+                <li><a href="#">3차 메뉴 아이템</a></li>
+              </ul>
+            </li>
             <li><a href="#">2차 메뉴 아이템</a></li>
             <li><a href="#">2차 메뉴 아이템</a></li>
             <li><a href="#">2차 메뉴 아이템</a></li>
