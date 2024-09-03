@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인폼만들기(연습문제2)</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    a{text-decoration: none; color: inherit;}
+    body{font-family: Verdana, Geneva, Tahoma, sans-serif; color: #666; font-size: 16px;}
+
+    .login{
+      position: fixed;  /*고정*/
+      top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
+      background-color: white;
+    }
+    .login > .container{
+      width: 580px;
+      height: 400px;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <div class="container">
+      <div>
+        <h1>로그인</h1>
+        <b>그린컴퓨터 아카데미</b>에 오신것을 환영합니다.
+        로그인 후 다양한 서비스를 이용하실 수 있습니다.
+      </div>
+      <form>
+        <p>
+          <label>회원아이디</label> 
+          <input type="text" name="id" id="id">
+        </p>
+        <p>
+          <label>비밀번호</label>
+          <input type="text" name="pw" id="pw">
+        </p>
+        <button>로그인</button>
+      </form>
+      <div>
+        아이디 / 비밀번호 찾기
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

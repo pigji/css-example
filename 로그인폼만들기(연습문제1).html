@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인폼 만들기(연습문제1)</title>
+
+  <!--폰트어썸 내 script 코드-->
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    a{text-decoration: none; color: inherit;}
+    body{font-family: Verdana, Geneva, Tahoma, sans-serif; color: #666; font-size: 16px;}
+
+    .login{
+      position: fixed;  /*고정*/
+      top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .login > .container{
+      width: 300px;
+      height: 300px;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      transform: translateX(-50%);
+    }
+    .close{
+      height: 40px;
+      border-bottom: 1px solid #999;
+      position: relative;
+
+    }
+    .close > a{
+      font-size: 20px;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+    form{padding: 30px 40px;}
+
+    /*글자와 input사이 여백설정*/
+    label{line-height: 1.5;}
+
+    /*type=text인 속성 설정*/
+    input[type=text]{
+      width: 220px;
+      height: 40px;
+      margin-bottom: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #999;
+      text-indent: 10px;  /*글자 들여쓰기*/
+    }
+    button{
+      width: 220px;
+      height: 40px;
+      color: #fff;
+      background-color: black;
+      font-size: 16px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <div class="container">
+      <div class="close">
+        <a href="#"><i class="fas fa-times"></i></a>
+      </div>
+      <form>
+        <p>
+          <label>사용자명 또는 이메일주소</label><br>
+          <input type="text" id="user" name="user">
+        </p>
+        <p>
+          <label>암호</label>
+          <input type="text" id="pw" name="pw">
+        </p>
+        <button type="submit">로그인</button>
+      </form>
+    </div>
+  </div>
+  <section class="content">
+    <h1>로그인 입력창을 만들어 보세요.</h1>
+  </section>
+</body>
+</html>
