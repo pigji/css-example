@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬 연습문제(flex사용)</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+
+    nav{
+      width: 1080px;
+      border: 2px solid blue;
+      display: flex;
+    }
+    
+    .container{
+      border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="text-img">
+        <img src="https://picsum.photos/160/160" alt="">
+        <div>
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
+            sunt facilis. Facere, repellendus!</p>
+        </div>
+      </div>
+      <div class="text-img">
+        <img src="https://picsum.photos/160/160" alt="">
+        <div>
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
+            sunt facilis. Facere, repellendus!</p>
+        </div>
+      </div>
+      <div class="text-img">
+        <img src="https://picsum.photos/160/160" alt="">
+        <div>
+          <h2>DESCRIPTION</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
+            sunt facilis. Facere, repellendus!</p>
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="https://picsum.photos/520/520" alt="">
+    </div>
+  </nav>
+</body>
+</html>

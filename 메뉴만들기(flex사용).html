@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴만들기 (flex사용)</title>
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    .nav{
+      height: 100px;
+      background-color: #afafaf;
+      display: flex;
+      justify-content: flex-end;  /*주축 정렬*/
+      align-items: center;  /*교차축 정렬*/
+    }
+    .nav > li > a{
+      display: block;
+      padding: 20px;
+      font-weight: bold;  /*글씨 두껍게*/
+    }
+    .nav > li:hover > a{
+      color: white;
+      background-color: black;
+    }
+
+    /*미디어쿼리(반응형 만들때 사용)*/
+    @media (max-width:600px) {  /*뷰포트의 넓이가 600px 이하일때 속성적용*/
+      .nav{
+        height: auto;
+        flex-direction: column;
+      }
+    }
+    .nav > li{
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <ul class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Prouducts</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>

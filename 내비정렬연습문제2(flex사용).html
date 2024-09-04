@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2줄 - 내비정렬 연습문제(flex사용)</title>
+
+  <!--폰트어썸 내 script 코드-->
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <style>
+    /*초기화*/
+    *{margin:0; padding:0;}
+    ul,li{list-style:none;}
+    a{text-decoration: none; color:inherit;}
+    body{font: 16px/1.5 Arial;} /*축약형*/
+
+    /* 공통부분 */
+    .container{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      display: flex;
+    }
+
+    /* 상단메뉴 : join */
+    nav > div{  /*공통 div설정(코드최소화)*/
+      min-width: 1200px;
+      width: 100%;
+      color: white;
+    }
+    nav > .join{
+      background-color: #333;
+    }
+    .join > .container{
+      justify-content: flex-end;  /*오른쪽 끝으로 정렬*/
+    }
+    .join ul{
+      display: flex;  /*나란히 정렬*/
+    }
+    .join ul li{
+      margin-left: 40px;  /*li 간격설정*/
+      padding: 10px 0;
+      font-size: 18px;
+    }
+    .join ul li a:hover{
+      color: aquamarine;
+    }
+
+    /* 하단메뉴 : menu */
+    nav > .menu{
+      background-color: orange;
+    }
+    .menu > .container{
+      justify-content: space-between; /*각 요소 양끝에 배치*/
+      height: 80px;
+      align-items: center;
+    }
+    .menu > h1{
+      font-size: 36px;
+    }
+    .menu ul{
+      display: flex;  /*나란히 정렬*/
+    }
+    .menu li{
+      margin-left: 45px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .menu ul li:hover{
+      color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="join">
+      <div class="container">
+        <ul>
+          <li><a href="#">login</a></li>
+          <li><a href="#">join us</a></li>
+          <li><a href="#">member</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="container">
+        <h1>
+         <a href="#"><i class="fas fa-tablet-alt"></i> SHAMMAH</a> 
+        </h1>
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="#">ALBUM</a></li>
+          <li><a href="#">BOARD</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
