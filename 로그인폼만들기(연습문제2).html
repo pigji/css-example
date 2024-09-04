@@ -6,47 +6,119 @@
   <title>로그인폼만들기(연습문제2)</title>
 
   <style>
+    /*구글폰트 사용*/
+    @import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&display=swap');
+    
     /*초기화*/
     *{margin: 0; padding: 0; box-sizing: border-box;}
     a{text-decoration: none; color: inherit;}
-    body{font-family: Verdana, Geneva, Tahoma, sans-serif; color: #666; font-size: 16px;}
+    body{
+      font-family: "Jua", sans-serif; /*구글폰트 사용*/
+      line-height: 1.4; 
+      font-size: 16px;
+    }
 
     .login{
       position: fixed;  /*고정*/
-      top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
-      background-color: white;
+      top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌(영역에 꽉차게 정렬)*/
+      background-color: rgba(0, 0, 0, 0.8);
     }
     .login > .container{
       width: 580px;
       height: 400px;
-      border: 3px solid black;
+      background-color: white;
+      padding: 40px 0;
+      position: absolute; /*유령화*/
+      /*calc = 계산기( +, -, * ,/ )*/
+      left: calc(50% - 290px);
+      /* margin-left: -290px;  가운데정렬 */
+      top: 100px;
     }
+    .login > .container > h1{
+      font-size: 36px;
+      color: #1aa5d0;
+      text-align: center; /*가운데정렬*/
+    }
+    .login > .container > p{
+      text-align: center;
+      margin: 20px 0 40px;  /* 위:20px , 좌우:0 , 아래:40px 여백설정*/
+      color: #666;
+    }
+    .login > .container > p > b{
+      font-size: 18px;
+    }
+    form{
+      border-top: 1px solid #1aa5d0;
+      border-bottom: 1px solid #d4e2e2;
+      padding: 0 20px;
+    }
+    table{border-collapse: collapse;}
+    table td{
+      height: 65px;
+      color: #666;
+    }
+    
+    /*input요소 설정*/
+    input[type=text], input[type=password]{
+      width: 220px;
+      height: 30px;
+      margin: 0 80px 0 30px;
+      border: 1px solid #999;
+      background-color: #f1f1f1;
+    }
+
+    /* input 로그인 버튼요소 */
+    input[type=submit]{
+      width: 120px;
+      height: 94px;
+      font-size: 22px;
+      font-weight: bold;  /*글씨 두껍게*/
+      color: white;
+      background-color: #1aa5d0;
+      border: 0;  /*테두리 제거*/
+    }
+    .join{
+      font-size: 14px;
+      text-align: right;
+      line-height: 2;
+      padding-right: 36px;
+      color: #666;
+    }
+    
   </style>
 </head>
 <body>
   <div class="login">
     <div class="container">
-      <div>
-        <h1>로그인</h1>
-        <b>그린컴퓨터 아카데미</b>에 오신것을 환영합니다.
+      <h1>로그인</h1>
+      <p>
+        <b>그린컴퓨터 아카데미</b>에 오신것을 환영합니다. <br>
         로그인 후 다양한 서비스를 이용하실 수 있습니다.
-      </div>
+      </p>
       <form>
-        <p>
-          <label>회원아이디</label> 
-          <input type="text" name="id" id="id">
-        </p>
-        <p>
-          <label>비밀번호</label>
-          <input type="text" name="pw" id="pw">
-        </p>
-        <button>로그인</button>
+        <table>
+          <tr>
+            <td><label for="user_id">회원아이디</label></td>
+            <td>
+              <input type="text" id="user_id" name="user_id">
+            </td>
+            <td rowspan="2"><input type="submit" value="로그인"></td>
+          </tr>
+          <tr>
+            <td><label for="user_pw">비밀번호</label></td>
+            <td>
+              <input type="password" id="user_pw" name="user_pw">
+            </td>
+          </tr>
+        </table>
       </form>
-      <div>
-        아이디 / 비밀번호 찾기
+      <div class="join">
+        <a href="#">아이디 / 비밀번호 찾기</a>
       </div>
     </div>
-
   </div>
+  <section class="content">
+    <h1>로그인 입력창을 만들어 보세요.</h1>
+  </section>
 </body>
 </html>
