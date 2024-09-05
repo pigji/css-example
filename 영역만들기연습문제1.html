@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영역만들기 연습문제1</title>
+
+  <!--노멀라이즈-->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+  <style>
+    *{margin: 0; padding: 0;}
+    ul,li{list-style:none;}
+
+    /*공통코드 작성(코드최소화)*/
+    header,
+    section,
+    footer{
+      width:760px;
+      outline:1px solid orange;
+      margin:10px auto; /* 여백+가운데정렬 */
+    }
+    /*상단:header*/
+    header{
+      height:120px;
+      display:flex;
+      padding:10px;
+      justify-content: space-between; /*각 요소 양끝에 배치*/
+    }
+    header > .logo{
+      width:160px;
+      height:100px;
+      outline:1px solid blue;
+    }
+    header > nav{
+      width:460px;
+      height:100px;
+      /*outline:1px solid red; 영역 확인용*/
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .topNav{
+      width:140px;
+      height:20px;
+      outline: 1px solid blue;
+    }
+    .gnb{
+      width:460px;
+      height:40px;
+      outline: 1px solid blue;
+      display:flex;
+      gap:10px;/*item사이에 여백을 설정*/
+      padding:5px;
+    }
+    .gnb > li{
+      width:105px;
+      height:30px;
+      outline:1px dashed gray;
+    }
+    #banner{
+      height:240px;
+    }
+    #contents{
+      height:520px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: space-evenly;
+    }
+    .box{
+      width:240px;
+      height:160px;
+      outline:1px solid blue;
+    }
+    .box:first-child,
+    .box:last-child{
+      width:490px;
+    }
+
+    /*하단:footer*/
+    footer{
+      height: 100px;
+      display: flex;  /*flex는 항상 부모요소한테 지정해줘야함*/
+      padding: 10px;
+      justify-content: space-between;
+      align-items: flex-end;  /*바닥으로 위치하도록 설정*/
+    }
+    footer > .logo{
+      width: 150px;
+      height: 80px;
+      outline:1px solid blue;
+    }
+    footer > .txt{
+      width: 280px;
+      height: 20px;
+      outline:1px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <nav>
+      <div class="topNav"></div>
+      <ul class="gnb">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="banner"></section>
+  <section id="contents">
+    <article class="box b1"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box"></article>
+    <article class="box b7"></article>
+  </section>
+  <footer>
+    <div class="logo"></div>
+    <div class="txt"></div>
+    <div class="txt"></div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영역만들기 연습문제2</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    ul,li{list-style:none;}
+    body{background-color: #333;}
+
+    main{ /*전체 박스*/
+      width: 1200px;
+      padding: 10px 10px;
+      display: flex;  /*나란히 정렬*/
+    }
+
+    .b1{  /*첫번째 이미지*/
+      width: 360px;
+      height: 480px;
+      background: url(bg_image/layout01.png);
+      color: white;
+    }
+    .b1 > hr{
+      width: 20px;
+      border: 1px solid white;
+      margin: 20px 0; /*위/아래 여백 20px 설정*/
+    }
+    /*공통 속성*/
+    .box{
+      padding: 40px;
+      line-height: 1.6;
+    }
+    .box > h2{
+      font-size: 16px;
+    }
+    .box li{
+      font-size: 12px;
+    }
+
+    main > .wrap{  /*두번째 이미지*/
+      width: 820px;
+      height: 480px;
+      display: flex;
+      flex-wrap: wrap;  /*줄바꿈 허용*/
+    }
+    main > .wrap > .box{
+      height: 240px;
+    }
+    .b2{
+      width: 560px;
+      background-image: url(bg_image/layout02.png);
+      color: white;
+    }
+    .b2 > h2{
+      margin-bottom: 20px;
+    }
+    .b3, .b4{
+      width: 260px;
+      background-color: white;
+      color: #333;
+    }
+    .b3 > hr, .b4 > hr{
+      border: 1px solid #999;
+      width: 20px;
+      margin: 20px 0;
+    }
+    .b5{
+      width: 560px;
+      background-image: url(bg_image/layout03.png);
+    }
+    </style>
+</head>
+<body>
+  <main>
+    <div class="box b1">
+      <h2>제품기획·개발·생산</h2>
+      <hr>
+      <ul>
+        <li>UV 소독</li>
+        <li>CLEAN</li>
+        <li>소형가전</li>
+        <li>BEAUTY</li>
+      </ul>
+    </div>  <!--box b1-->
+    <div class="wrap">
+      <div class="box b2">
+        <h2>
+          국내를 넘어<br>
+          세계로 도약하는 기업
+        </h2>
+        <img src="bg_image/global_nobel.png" alt="">
+      </div>  <!--box b2-->
+      <div class="box b3">
+        <h2>Research & Devlope</h2>
+        <hr>
+        <ul>
+          <li>센서 개발</li>
+          <li>UV LED 적용 기술</li>
+        </ul>
+      </div> <!--box b3-->
+      <div class="box b4">
+        <h2>ODM / OEM</h2>
+        <hr>
+        <ul>
+          <li>제품 기획</li>
+          <li>금형 설계</li>
+          <li>디자인/설계</li>
+          <li>시제품 제작</li>
+          <li>회로 설계</li>
+          <li>양산품 제작</li>
+        </ul>
+      </div>  <!--box b4-->
+      <div class="box b5"></div>
+    </div>  <!--wrap-->
+  </main>
+</body>
+</html>
