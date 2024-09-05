@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠정렬 연습문제4(positon)</title>
+
+  <!--외부링크로 스타일 초기화-->
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
+
+  <!--폰트어썸 내 script 코드-->
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <style>
+    /*초기화*/
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    body{color: #333;}
+
+    /*전체 박스*/
+    .container{
+      width: 100%;
+      min-width: 1200px;
+      height: 720px;
+      background-image: url(bg_image/main.jpg);
+      background-position: center;  /*가운데정렬*/
+      background-size: contain; /*영역에 빈공간이 없도록 배경이미지를 채움*/
+    }
+
+    /*상단영역*/
+    .container > .wrap{
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto; /*가운데정렬*/
+      position: relative;
+    }
+    nav{
+      display: flex;
+      padding: 20px 10px;
+      justify-content: space-between; /*각 요소 양쪽 끝으로 배치*/
+      align-items: center;  /*가운데정렬*/
+    }
+    nav > .gnb{
+      display: flex;
+      font-size: 14px;
+      color: white;
+    }
+    .gnb > li{
+      margin-left: 40px;
+    }
+    .gnb > li > a{
+      padding-bottom: 5px;
+    }
+    /*hover이벤트 추가*/
+    .gnb > li > a:hover{
+      border-bottom: 2px solid #fff;
+    }
+
+    .text{
+      position: absolute; /*유령화*/
+      left: 50%;  /*위치설정*/
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; /*가운데정렬*/
+      color: white;
+      user-select: none;  /*요소 선택 안되도록 설정*/
+    }
+    .text i{
+      font-size: 36px;
+      color: white;
+      margin-top: 20px 10px 0;
+    }
+    .dot{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%);
+      display: flex;  /*일렬로 정렬*/
+    }
+    .dot > li{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid white;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .dot > li:hover, .dot > li.on{
+      background-color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <nav>
+        <h1 class="logo"><a href="#">
+          <img src="bg_image/pinterest_b.png" width="60" alt="logo">
+        </a></h1>
+        <ul class="gnb">
+          <li><a href="#">About</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">ProtFolio</a></li>
+          <li><a href="#">Board</a></li>
+          <li><a href="#">Album</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet<br>
+          saepe asperiores voluptatibus eos
+        </h1>
+        <div class="btn"> <!--화살표-->
+          <button type="button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button type="button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <ul class="dot">  <!--페이지네이션-->
+        <li class="on"><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>  <!--wrap-->
+  </div>  <!--container-->
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타임라인</title>
+
+  <!--외부링크로 스타일 초기화-->
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
+
+  <style>
+    /*초기화*/
+    *{box-sizing: border-box;}
+    body{background-color: #474e52; font-family: Helvetica;}
+
+    .timeline{
+      max-width: 1200px;  /*최대넓이 설정*/
+      margin: 0 auto; /*가운데정렬*/
+      position: relative;
+    }
+    /*수직선*/
+    .timeline::after{
+      content: "";  /*가짜속성*/
+      position: absolute;
+      width: 6px;
+      background-color: white;
+      top: 0; bottom: 0; /*부모요소의 높이 값만큼 늘어남*/
+      left: calc(50% - 3px);  /*50% 위치에서 width -3px만큼 위치(가운데정렬)*/
+    }
+
+    .container{
+      width: 50%;
+      padding: 10px 40px; /*위/아래:10px , 좌/우:40px 여백설정*/
+      position: relative; /*유령의 집화*/
+    }
+
+    /*동그라미 생성(가상요소)*/
+    .container::after{
+      content: "";  /*가짜속성*/
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border-radius: 50%;
+      border: 4px solid #ff9f55;
+      top: 15px;  /*위에서 15px 밑으로 위치*/
+      right: -12px; /*가운데 위치*/
+      z-index: 1; /*우선순위를 먼저두어서 맨앞에 표시(선에 가려지지 않게 설정)*/
+    }
+
+    /*container내용 위치설정*/
+    .left{
+      left: 0;
+    }
+    .right{
+      left: 50%;
+    }
+
+    /*동그라미(가상요소)*/
+    .right::after{
+      left: -12px;  /*위치이동*/
+    }
+
+    /*삼각형(가상요소)*/
+    .left::before{
+      content: "";  /*가짜요소*/
+      width: 0; height: 0;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      border: 10px solid transparent; /*transparent 투명*/
+      border-left-color: white; /*삼각형으로 만들기 위한 왼쪽테두리 생성*/
+    }
+    .right::before{
+      content: "";  /*가짜요소*/
+      width: 0; height: 0;
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      border: 10px solid transparent; /*transparent 투명*/
+      border-right-color: white;  /*삼각형으로 만들기 위한 오른쪽테두리 생성*/
+    }
+
+    /*년도/내용 박스*/
+    .content{
+      padding: 20px 30px;
+      background-color: white;
+      border-radius: 6px;
+    }
+    .content h2{
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .content p{
+      line-height: 1.4;
+      color: #666;
+    }
+    /*브라우저의 넓이가 600px이하로 줄어들었을때 적용*/
+    /*브라우저의 넓이가 600이하로 줄어들었을 때*/
+    @media (max-width:600px) {
+      /*수직선*/
+      .timeline::after{ left: 30px;}
+      .container{
+        width:100%;
+        padding-left:70px;
+        padding-right:25px;
+      }
+      /*삼각형*/
+      .container::before{
+        left:50px;
+        border-color:transparent;
+        border-right-color:#fff;
+      }
+      .right{
+        left:0;
+      }
+      /*동그라미*/
+      .left::after,
+      .right::after{
+        left:20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2024</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container left-->
+    <div class="container right">
+      <div class="content">
+        <h2>2023</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container right-->
+    <div class="container left">
+      <div class="content">
+        <h2>2022</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container left-->
+    <div class="container right">
+      <div class="content">
+        <h2>2021</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container right-->
+    <div class="container left">
+      <div class="content">
+        <h2>2020</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container left-->
+    <div class="container right">
+      <div class="content">
+        <h2>2019</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Obcaecati natus nihil labore inventore aut numquam ipsum. Ipsam, necessitatibus?
+        </p>
+      </div>  <!--content-->
+    </div>  <!--container right-->
+  </div>  <!--timeline-->
+</body>
+</html>
