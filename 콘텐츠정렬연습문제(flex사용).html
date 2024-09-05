@@ -5,59 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>콘텐츠정렬 연습문제(flex사용)</title>
 
-  <style>
-    /*초기화*/
-    *{margin: 0; padding: 0;}
+  <!--외부링크로 스타일 초기화-->
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
 
-    nav{
-      width: 1080px;
-      border: 2px solid blue;
-      display: flex;
-    }
-    
+  <style>
+    /*전체 박스*/
     .container{
-      border: 2px solid red;
+      width: 1080px;
+      height: 520px;
+      margin: 0 auto; /*가운데정렬*/
+      display: flex;  /*일열로 정렬*/
+      justify-content: space-around;  /*주축 정렬*/
+    }
+    .container > div{
+      width: 520px; /*같은 간격으로 정렬*/
+      height: 520px;
+    }
+    .content{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap;  /*줄바꿈 허용*/
+      align-content: space-between; /*위,아래 공간에 맞게 배치(교차축 정렬)*/
+    }
+    .content > .box{
+      width: 100%;
+      height: 160px;
+      display: flex;
+      justify-content: space-between; /*양끝에 배치*/
+    }
+    .box > .text{
+      width: 340px;
+      height: 160px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+    .text > h2{
+      font-size: 15px;
+      line-height: 2;
+    }
+    .text > p{
+      font-size: 14px;
+      margin-top: 10px;
     }
 
   </style>
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <div class="text-img">
-        <img src="https://picsum.photos/160/160" alt="">
-        <div>
+  <div class="container">
+    <div class="content">
+      <div class="box">
+        <div class="thumb">
+          <img src="https://picsum.photos/160/160" alt="">
+        </div>
+        <div class="text">
           <h2>DESCRIPTION</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
             sunt facilis. Facere, repellendus!</p>
         </div>
       </div>
-      <div class="text-img">
-        <img src="https://picsum.photos/160/160" alt="">
-        <div>
+      <div class="box">
+        <div class="thumb">
+          <img src="https://picsum.photos/160/160" alt="">
+        </div>
+        <div class="text">
           <h2>DESCRIPTION</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
             sunt facilis. Facere, repellendus!</p>
         </div>
       </div>
-      <div class="text-img">
-        <img src="https://picsum.photos/160/160" alt="">
-        <div>
+      <div class="box">
+        <div class="thumb">
+          <img src="https://picsum.photos/160/160" alt="">
+        </div>
+        <div class="text">
           <h2>DESCRIPTION</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             At sint exercitationem nihil aspernatur mollitia perspiciatis eligendi,
             sunt facilis. Facere, repellendus!</p>
         </div>
       </div>
-    </div>
+    </div> <!--content-->
     <div class="image">
       <img src="https://picsum.photos/520/520" alt="">
     </div>
-  </nav>
+  </div> <!--container-->
 </body>
 </html>
