@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토글스위치 만들기</title>
+
+  <style>
+    .switch{
+      position: relative; /*유령의 집화 : 정렬하기 위해 사용*/
+      display: inline-block;  /*넓이와 높이를 주기위해 적용*/
+      width: 60px;
+      height: 34px;
+      /*outline: 2px solid red; 영역 확인용*/
+    }
+
+    /*체크박스는 화면에서 제거(눈에 안보이게 설정)*/
+    .switch > input{display: none;}
+    /*실제 보이는 스위치*/
+    .slider{
+      position: absolute; /*부모요소와 같은 크기로 겹침*/
+      top: 0; left: 0; bottom: 0; right: 0;
+      background-color: #ccc;
+      cursor: pointer;  /*버튼요소임을 알려줌(마우스 클릭가능하도록 설정)*/
+      transition: background .4s;
+    }
+    .slider::before{
+      content: "";  /*가짜속성*/
+      position: absolute; /*공중에 띄움*/
+      width: 26px;
+      height: 26px;
+      background-color: white;
+      left: 4px; bottom: 4px; /*가운데정렬*/
+      transition: transform .4s;  /*애니메이션 효과*/
+    }
+    /*체크박스가 체크되었을때(스위치 on)*/
+    input:checked + .slider{
+      background-color: skyblue;
+    }
+    /*체크박스가 체크되었을때 포인터를 오른쪽으로 이동*/
+    input:checked + .slider::before{
+      transform: translateX(26px);
+    }
+
+    /*둥근모양으로 변경*/
+    .round{
+      border-radius: 34px;
+    }
+    .round::before{
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked> <!--checked:자동 체크된 상태-->
+    <span class="slider"></span>
+  </label>
+
+  <br><br>  <!--줄바꿈-->
+
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked> <!--checked:자동 체크된 상태-->
+    <span class="slider round"></span>
+  </label>
+</body>
+</html>
