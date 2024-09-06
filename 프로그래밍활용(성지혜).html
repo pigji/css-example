@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로그래밍언어활용</title>
+  <style>
+    /*스타일작성*/
+  </style>
+</head>
+
+<body>
+  <!--코드작성-->
+  <div>
+    <h1 id="text">Hello, World!</h1>
+    <label>글자 색성 선택:</label>
+    <select name="color" id="color">
+      <option value="black">검정색</option>
+      <option value="yellow">노란색</option>
+    </select>
+    <label>배경 색상 선택:</label>
+    <select name="background" id="background">
+      <option value="white">흰색</option>
+      <option value="pink">분홍색</option>
+    </select>
+    
+    <!--적용버튼 id="apply"-->
+    <button id="apply" value="apply">적용</button>
+  </div>
+  
+
+  <!--====================-->
+  <script>
+    document.getElementById('apply').onclick = function () {
+      var textColor = document.getElementById('color').value;
+      var backgroundColor = document.getElementById('background').value;
+
+      document.getElementById('text').style.backgroundColor = backgroundColor;
+      document.body.style.color = textColor;
+    }
+  </script>
+</body>
+
+</html>

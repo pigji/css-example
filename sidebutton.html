@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sidebutton</title>
+
+  <style>
+    main{
+      width: 800px;
+      height: 700px;
+      background-color: lightyellow;  /*영역 확인용*/
+      margin: 0 auto; /*가운데정렬*/
+      outline: 1px solid orange;  /*영역 확인용*/
+      position: relative; /*공중에 띄움*/
+      overflow: hidden; /*영역 밖으로 넘어가는 자식요소를 가려줌*/
+    }
+    .sidenav > a{
+      text-decoration: none;
+      position: absolute; /*유령화로 공중에 띄움*/
+      width: 100px;
+      padding: 15px;
+      font-size: 20px;
+      color: white;
+      background-color: skyblue;
+      border-radius: 0 5px 5px 0; /*왼쪽상단 > 오른쪽상단 > 오른쪽하단 > 왼쪽하단 순서*/
+      left: -100px; /*main요소 밖으로 위치하도로고 설정*/
+      transition: left .3s; /*left속성이 변경되면 0.3초에 걸쳐서 서서히 변경됨(애니메이션 효과)*/
+    }
+    /*버튼에 마우스를 올리면 오른쪽으로 이동*/
+    .sidenav > a:hover{
+      left: 0;
+    }
+
+    /*a태그 요소*/
+    #about{
+      background-color: tomato;
+      top: 20px;  /*위치설정*/
+    }
+    #blog{
+      background-color: pink;
+      top: 80px;
+    }
+    #projects{
+      background-color: skyblue;
+      top: 140px;
+    }
+    #contact{
+      background-color: lightgreen;
+      top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="sidenav">
+      <a href="#" id="about">about</a>
+      <a href="#" id="blog">blog</a>
+      <a href="#" id="projects">projects</a>
+      <a href="#" id="contact">contact</a>
+    </div>
+  </main>
+</body>
+</html>

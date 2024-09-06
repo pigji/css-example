@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svg활용</title>
+
+  <style>
+    article{
+      width: 500px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      padding: 50px;
+    }
+
+    article > svg > path{
+      fill: transparent;  /*투명색으로 변경*/
+      stroke: red;  /*외곽선*/
+      stroke-width: 3;  /*외곽선 두께*/
+      /*점선*/
+      stroke-dasharray: 1520px;
+      stroke-dashoffset: -1520; /*점선의 길이만큼 이동시킴*/
+      
+      transition: all 3s;  /*애니메이션 효과*/
+      /*transition: all 3s cubic-bezier(.02,1.02,.87,.27) > 가감속 애니메이션 효과*/
+    }
+    article:hover svg path{
+      stroke-dashoffset: 0; /*점선의 위치를 초기위치로 이동시켜 선이 그려지는 애니메이션을 만들어줌*/
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <!--viewBox = 'x좌표값, y좌표값, 영역의 넓이값, 영역의 높이값'-->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3
+      47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244
+      84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+    </svg>
+  </article>
+</body>
+</html>

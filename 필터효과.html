@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>필터 효과</title>
+
+  <style>
+    div{
+      width: 650px;
+      margin: 100px auto; /*가운데정렬*/
+      border: 1px solid #ccc; /*영역 확인용*/
+      padding: 10px;
+    }
+    div > img{
+      width: 200px;
+      margin: 5px;
+    }
+
+    /*블러효과 : 수치값이 커질수록 blur효과가 증가된다*/
+    div img:nth-of-type(2){
+      filter: blur(3px);
+    }
+    /*밝기보정 : 1보다 작아지면 어두워지고 커지면 밝아짐*/
+    div img:nth-of-type(3){
+      filter: brightness(1.1)
+    }
+    /*명도대비 조정 : 100%작아지면 대비효과가 낮아지고 높아지면 대비증가*/
+    div img:nth-of-type(4){
+      filter: contrast(150%)
+    }
+    /*회색이미지 : 100%로 근접할수록 흑백전환*/
+    div img:nth-of-type(5){
+      filter: grayscale(100%);
+    }
+    /*색상변경 : 0deg는 원래 색상이미지, 0~360deg까지 변경할수록 색상변경(컬러스펙트럼)*/
+    div img:nth-of-type(6){
+      filter: hue-rotate(180deg);
+    }
+    /*색상반전 : 100%로 근접할수록 색감이 정반대로 변경*/
+    div img:nth-of-type(7){
+      filter: invert(100%);
+    }
+    /*채도조절 : 0으로 근접할수록 색감의 채도가 낮아짐*/
+    div img:nth-of-type(8){
+      filter: saturate(0.5);
+    }
+    /*톤 변경 : 100%로 근접할수록 갈색톤으로 색감이 변경됨*/
+    div img:nth-of-type(9){
+      filter: sepia(100%);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+    <img src="bg_image/rose.jpg" alt="장미">
+  </div>
+</body>
+</html>
