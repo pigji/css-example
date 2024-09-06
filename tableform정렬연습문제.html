@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tableform정렬 연습문제</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+
+    form{
+      width: 1000px;
+      margin: 20px auto;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 3px solid darkseagreen;
+    }
+    td{
+      border-bottom: 1px solid #ccc;
+      padding: 20px 40px; /*위/아래:20px , 좌/우:40px 여백설정*/
+      font-size: 16px;
+    }
+    /*첫번째 td태그 : 구분선 설정*/
+    td:first-child{
+      border-right: 1px solid #ccc;
+    }
+    input, select{
+      padding: 8px;
+      font-size: 16px;
+      outline: none;  /*테두리 제거*/
+      /* height: 40px;
+      box-sizing: border-box; */
+    }
+    /*후원자구분 체크 사이 여백설정*/
+    input[type=radio]{
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+      transform: translateY(2px); /*틀어짐 제자리로 설정(가운데로 맞춰줌)*/
+    }
+    label{margin-right: 20px;}
+    
+    /*성명*/
+    .name{width: 150px;}
+
+    /*주민등록번호*/
+    .num1{
+      width: 60px;
+      text-align: center;
+    }
+    .num2{
+      width: 10px;
+      text-align: center;
+      margin-right: 5px;
+    }
+
+    /*연락처*/
+    input[type=tel]{
+      width: 50px;
+      text-align: center;
+    }
+    /*주소*/
+    p:nth-of-type(1){
+      margin-bottom: 20px;
+    }
+    .zipcode{
+      width: 200px;
+    }
+    input[type=button]{
+      width: 116px;
+      background-color: gray;
+      border: 1px solid gray;
+      color: white;
+      border-radius: 4px;
+      transform: translateY(1px); /* 버튼요소 1px만큼 내려줌(주소 입력칸이랑 버튼이랑 높이맞춤) */
+    }
+    .address{
+      width: 320px;
+    }
+    /*이메일*/
+    .email{
+      width: 180px;
+    }
+    /*버튼*/
+    .align{
+      margin-top: 20px;
+      text-align: center;
+    }
+    .align > input{
+      border-radius: 4px;
+      border: 0;  /*테두리 제거*/
+      background-color: orange;
+      color: white;
+      padding: 10px 30px;
+      cursor: pointer;
+    }
+    /*버튼 hover 이벤트*/
+    .align > input:hover{
+      background-color: orangered;
+    }
+
+  </style>
+</head>
+<body>
+
+  <form>
+    <table>
+      <tr>
+        <td>*후원자 구분</td>
+        <td>
+          <label> <!-- name을 주면 그룹으로 묶을 수 있음 -->
+            <input name="sponsor" type="radio" checked> 개인
+          </label>
+          <label>
+            <input name="sponsor" type="radio"> 기업
+          </label>
+          <label>
+            <input name="sponsor" type="radio"> 단체
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>*성명</td>
+        <td>
+          <input type="text" class="name">
+        </td>
+      </tr>
+      <tr>
+        <td>*주민번호</td>
+        <td>
+          <input type="password" class="num1" maxlength="6">  <!--maxlength="값" : 값에 따라 입력되는 최대문자 수 설정-->
+          -
+          <input type="password" class="num2" maxlength="1">******
+        </td>
+      </tr>
+      <tr>
+        <td>*연락처</td>
+        <td>
+          <select>
+            <option>010</option>
+            <option>02</option>
+            <option>031</option>
+          </select>
+          -
+          <input type="tel" maxlength="4">
+          -
+          <input type="tel" maxlength="4">
+        </td>
+      </tr>
+      <tr>
+        <td>*주소</td>
+        <td>
+          <p>
+            <input class="zipcode" type="text">
+            <input type="button" value="우편번호찾기">
+          </p>
+          <p>
+            <input type="text" class="address">
+            <input class="more" type="text" placeholder="상세주소">
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>*이메일</td>
+        <td>
+          <input class="email" type="text">
+          @
+          <input class="email" type="text">
+        </td>
+      </tr>
+    </table>
+    <div class="align">
+      <input type="submit" value="다음단계">
+    </div>
+  </form>
+
+</body>
+</html>
