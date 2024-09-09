@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플립카드</title>
+
+  <style>
+    .flip-card{
+      width: 300px;
+      height: 300px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;  /*z축으로 깊이감 생성*/
+    }
+    /*이 요소는 앞면과 뒷면을 배치하는데 필요*/
+    .flip-card-inner{
+      position: relative; /*유령의 집화 : 요소를 겹치기 위해서 사용*/
+      width: 100%;
+      height: 100%;
+      text-align: center; /*가운데정렬*/
+      transition: transform .8s;  /*transform속성이 변경되면 0.8초에 걸쳐서 서서히 변경*/
+      
+      /*
+        transform-style속성은 요소의 자식요소가 입체적인 3D공간에 배치될지,
+        요소의 표면에 평평하게 묘사할지를 결정합니다.
+        기본값 = rlat(2d)
+        preserve-3d를 지정하면 3d공간에 배치됩니다
+      */
+      transform-style: preserve-3d;
+    }
+    /*플립상자 컨테이너 위로 마우스를 이동하면 수평으로 뒤집힘*/
+    .flip-card:hover .flip-card-inner{
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back{
+      position: absolute; /*공중에 띄움*/
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;  /*요소의 뒷면을 투명하게 가려줌*/
+    }
+    /*뒷면을 뒤집어서 flip-card-inner가 뒤집혔을때 보여지게 함*/
+    .flip-card-back{
+      transform: rotateY(180deg);
+      background-color: lightpink;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="flip-card"> <!--전체박스-->
+    <div class="flip-card-inner">
+      <div class="flip-card-front"> <!--앞면-->
+        <img src="https://picsum.photos/id/237/300" alt="">
+      </div>
+      <div class="flip-card-back">  <!--뒷면-->
+        <h1>John Doe</h1>
+        <p>Architect &amp; Engineer</p>
+        <p>We love that dog</p>
+      </div>
+    </div>  <!--flip-card-inner-->
+  </div>  <!--flip-card-->
+</body>
+</html>
