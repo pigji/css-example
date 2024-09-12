@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정렬연습[슬라이드]</title>
+
+    <!--폰트어썸 내 script 코드-->
+    <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #gallery {
+        width: 1080px;
+        margin: 100px auto; /*가운데정렬*/
+        outline: 1px solid red; /*영역 확인용*/
+        position: relative; /*유령의 집화 : 화살표를 띄우기 위해 사용*/
+        overflow: hidden;
+      }
+      #gallery > .box {
+        width: 1800px;
+        display: flex;
+        transform: translateX(-360px);
+      }
+      #gallery > .box > li{
+        width: 200px;
+        text-align: center; /*가운데정렬*/
+        padding: 0 80px;
+        color: #666;
+      }
+      .box li img{
+        border-radius: 50%;
+        margin-bottom: 30px;
+      }
+      .box li h2{
+        font-size: 20px;
+      }
+      .box li p:nth-of-type(1){ /*p태그중에서 1번째 요소 선택*/
+        font-size: 14px;
+      }
+      .box li p{
+        margin: 20px;
+      }
+      .icon i{
+        font-size: 30px;
+        margin: 0 5px;
+      }
+      /*화살표 버튼*/
+      .left, .right{
+        position: absolute; /*공중에 띄움*/
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        font-size: 30px;
+        cursor: pointer;
+        color: #666;
+      }
+      .right{
+        right: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section id="gallery">
+      <ul class="box">
+        <li>
+          <img src="images/Frame 1.png" alt="" />
+          <h2>Segment Title</h2>
+          <p>Lorem ipsum dolor sit</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="images/Frame 2.png" alt="" />
+          <h2>Segment Title</h2>
+          <p>Lorem ipsum dolor sit</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="images/Frame 3.png" alt="" />
+          <h2>Segment Title</h2>
+          <p>Lorem ipsum dolor sit</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="images/Frame 4.png" alt="" />
+          <h2>Segment Title</h2>
+          <p>Lorem ipsum dolor sit</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </li>
+        <li>
+          <img src="images/Frame 5.png" alt="" />
+          <h2>Segment Title</h2>
+          <p>Lorem ipsum dolor sit</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </li>
+      </ul>
+      <!--box-->
+      <button class="left" type="button">
+        <!--화살표 버튼-->
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="right" type="button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+  </body>
+</html>

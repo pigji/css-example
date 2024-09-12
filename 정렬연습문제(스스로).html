@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제(혼자서 코드작성)</title>
+
+  <style>
+    *{margin: 0;padding: 0;}
+    ul,li {list-style: none;}
+    a{text-decoration: none;color: inherit;}
+
+    .container{
+      width: 1080px;
+      background-color: pink;
+      margin: 0 auto;
+      display: flex;
+      color: #333;
+    }
+    .img-box, .txt-box{
+      padding: 10px;
+      width: 540px;
+    }
+    .img-box{
+      text-align: center;
+    }
+    .img-box > .image > img{  /*큰 이미지*/
+      width: 520px;
+      height: 520px;
+      /*border: 2px solid black; 영역 확인용*/
+      padding: 30px 5px;
+    }
+    .img-box > .images > img{
+      width: 80px;
+      height: 80px;
+      /*가운데정렬*/
+    }
+
+    /*txt-box*/
+    .txt-box > .title{
+      padding: 50px 5px;
+      font-weight: bold;
+    }
+    .txt-box > .title > p{
+      padding: 30px 0;
+    }
+    /*select*/
+    .txt-box > .title > select{
+      width: 150px;
+      height: 40px;
+      background-color: #999;
+      color: #333;
+      font-size: 12px;
+      padding: 5px;
+    }
+    /*colors*/
+    .txt-box > .title > .colors{
+      /* border: 1px solid red; 영역 확인용*/
+      margin-top: 30px;
+      display: flex;
+    }
+    .txt-box > .title > .colors > ul{
+      display: flex;
+      margin-left: 50px;
+    }
+    .txt-box > .title > .colors li{
+      width: 20px;
+      height: 20px;
+      background-color: #666;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+
+    /*sub-title*/
+    .sub-title{
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+    .sub-title > .sub-title-box1 > h1{
+      font-size: 14px;
+      margin: 10px;
+    }
+    .sub-title > .sub-title-box1 > p{
+      font-size: 12px;
+      margin: 5px 0 20px ;
+      line-height: 17px;
+    }
+    .sub-title > .sub-title-box2{
+      border-top: 1px solid #333;
+    }
+    .sub-title > .sub-title-box2 > h1{
+      font-size: 14px;
+      margin: 10px;
+    }
+
+    /*버튼요소*/
+    .but-box{
+      margin-top: 30px;
+      /*border: 2px solid black; 영역 확인용*/
+    }
+    .but-box > button{
+      background-color: white;
+      border: 2px solid #666;
+      color: #333;
+      width: 250px;
+      height: 40px;
+      border-radius: 30px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container"> <!--전체 영역-->
+    <div class="img-box"> <!--이미지 전체부분-->
+      <div class="image">
+        <img src="bg_image/bokeh.jpg" alt="">
+      </div>
+      <div class="images">
+        <img src="images/Frame 1.png" alt="">
+        <img src="images/Frame 2.png" alt="">
+        <img src="images/Frame 3.png" alt="">
+        <img src="images/Frame 4.png" alt="">
+        <img src="images/Frame 5.png" alt="">
+      </div>
+    </div>
+    <div class="txt-box"> <!--텍스트 전체부분-->
+      <div class="title">
+        <h1>Division Title</h1>
+        <p>10,000 &#92;</p>
+        <select>  <!--select 부분-->
+          <option>SIZE</option>
+        </select>
+        <select>
+          <option>QTY</option>
+        </select>
+        <div class="colors">
+          <p>COLORS</p>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>  <!--title-->
+      <div class="sub-title">
+        <div class="sub-title-box1">
+          <h1>- DESCRIPTION</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eligendi, nulla magni. Distinctio iusto tempore consectetur
+            excepturi optionesciunt cum reprehenderit culpa suscipit,
+            expedita beatae similique! Dolore quam suscipit maxime eveniet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem architecto nisi magni omnis non impedit,
+            enim cumque inventore vitae deleniti dicta minima error.
+          </p>
+        </div>  <!--sub-title-box-->
+        <div class="sub-title-box2">
+          <h1>+ DESCRIPTION</h1>
+        </div>
+      </div>
+      <div class="but-box">
+        <button type="button">BUTTON</button>
+        <button type="button">BUTTON</button>
+      </div>
+    </div>  <!--txt-box-->
+  </div>
+</body>
+</html>
