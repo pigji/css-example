@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다운내비</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    section{
+      height: 500px;
+      background-color: lightyellow;
+      border: 1px solid red;  /*영역 확인용*/
+    }
+    .gnb{
+      width: 800px;
+      margin: 0 auto;
+      display: flex;  /*나란히 정렬*/
+      text-align: center; /*텍스트 가운데정렬*/
+    }
+    .gnb > li{
+      width: 25%;
+      position: relative; /*유령의 집화*/
+    }
+    .gnb > li > a{
+      display: block;
+      padding: 10px 0;
+    }
+    .gnb > li:hover > a{
+      background-color: tomato;
+      color: white;
+    }
+
+    .sub{
+      width: 100%;
+      display: none;  /*서브메뉴를 가림*/
+      position: absolute; /*공중에 띄움(부모요소에 position: relative를 줘서 영역을 맞춤*/
+      background-color: white;
+      /*outline: 2px solid blue;  영역 확인용*/
+    }
+    .sub > li > a{
+      display: block;
+      padding: 10px 0;
+    }
+    .sub > li:hover > a{
+      background-color: yellowgreen;
+      color: white;
+    }
+
+    /*메뉴에 마우스를 올리면 서브메뉴가 표시됨*/
+    .gnb > li:hover > .sub{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="gnb">
+    <li>
+      <a href="#">메뉴</a>
+      <ul class="sub">
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴</a>
+      <ul class="sub">
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴</a>
+      <ul class="sub">
+        <li><a href="#">서브메뉴</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴</a>
+      <ul class="sub">
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+        <li><a href="#">서브메뉴</a></li>
+      </ul>
+    </li>
+  </nav>
+  <section></section>
+</body>
+</html>
