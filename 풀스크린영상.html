@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀스크린 영상</title>
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    /*전체박스*/
+    .container{
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; /*밖으로 넘어가는 부분 가려줌*/
+      position: relative; /*유령의 집화*/
+      color: white;
+      font-family: "Berlin Sans FB";
+    }
+    
+    /*비디오*/
+    video{
+      position: absolute; /*공중에 띄움*/
+      min-width: 1600px;
+      width: 100%;
+      height: auto;
+      left: 50%; top: 50%;  /*가운데정렬*/
+      transform: translate(-50%, -50%); /*화면 크기를 줄여서 영상이 항상 가운데에 있도록 설정*/
+    }
+    .logo{
+      position: absolute;
+      left: 10px; top: 20px;
+    }
+    .gnb{ /*메뉴목록*/
+      position: absolute;
+      right: 10px; top: 40px;
+      display: flex;
+    }
+    .gnb > li{
+      font-size: 20px;
+      margin: 0 20px;
+    }
+    .title{
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%); /*가운데배치*/
+      text-align: center;
+    }
+    .title > h1{
+      font-size: 80px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .title > p{
+      font-size: 30px;
+      font-weight: 500;
+    }
+    /*버튼요소*/
+    .lang{
+      position: absolute;
+      left: -10px; bottom: 50px;
+      transform: rotate(90deg);
+    }
+    .lang > button{
+      font-family: "Berlin Sans FB";
+      border: none; /*테두리제거*/
+      background-color: transparent;  /*배경색 투명하게 설정*/
+      color: white;
+      font-size: 18px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    /*sns 아이콘*/
+    .icon{
+      position: absolute;
+      right: 20px; bottom: 20px;
+    }
+    .icon i{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <video src="images/video.mp4" autoplay muted loop> <!--autoplay:영상 자동실행, loop:무한반복-->
+      <p>이 브라우저는 비디오를 지원하지 않습니다.</p>
+    </video>
+    <div class="logo">
+      <a href="#"><img src="images/logo.png" alt=""></a>
+    </div>
+    <ul class="gnb">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="title">
+      <h1>YOUR NAME</h1>
+      <p>I'm a Web Developer</p>
+    </div>
+    <div class="lang">
+      <button type="button">ENG</button>
+      <button type="button">KOR</button>
+    </div>
+    <ul class="icon">
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-behance"></i></a></li>
+      <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </section>
+</body>
+</html>
