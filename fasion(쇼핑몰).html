@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쇼핑몰 사이트</title>
+
+  <style>
+    *{margin: 0; padding: 0; font-family: 'Times New Roman', Times, serif;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    .container{
+      width: 100%;
+      height: 100vh;
+      background-image: url(images/background.png);
+      background-position: center;
+      background-size: cover;
+      padding-left: 5%;
+      padding-right: 5%;
+      box-sizing: border-box; /*padding으로 늘어난 부분 방지*/
+      position: relative; /*유령의 집화*/
+    }
+    .navbar{
+      width: 100%;
+      height: 15vh; /*브라우저 높이의 15%크기로 높이설정*/
+      display: flex;
+      align-items: center;
+    }
+    .navber .logo{
+      width: 160px;
+      cursor: pointer;
+    }
+    .navbar .cart{
+      width: 40px;
+      cursor: pointer;;
+    }
+    nav{
+      flex: 1;
+      padding-left: 60px;
+    }
+    nav ul li{
+      display: inline-block;
+      margin: 0 20px;
+    }
+    .content h1{
+      font-size: 60px;
+      font-weight: 100; /*폰트 얇게 설정*/
+      margin-top: 24px;
+      margin-bottom: 15px;
+      color: #232d60;
+    }
+    .content p{
+      font-size: 20px;
+      color: #6a7199;
+    }
+    .content{
+      margin-left: 10%;
+      margin-top: 10%;
+    }
+    .content .btn{  /*버튼요소*/
+      display: inline-block;
+      background: linear-gradient(45deg, #87adfe, #ff77cd);  /*그라데이션 효과*/
+      border-radius: 6px;
+      padding: 10px 20px;
+      color: white;
+      box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.15);
+    }
+    .arrow-icons{
+      margin-top: 40px;
+      display: flex;
+    }
+    .arrow-icons img{
+      width: 40px;
+      margin-right: 25px;
+      cursor: pointer;
+    }
+
+    .feature-img{
+      height: 90%;
+      position: absolute;
+      bottom: 0; right: 160px;
+    }
+    .social-links{
+      position: absolute;
+      transform: rotate(-90deg);  /*90도 회전*/
+      left: -80px; bottom: 180px;
+    }
+    .social-links a{
+      color: #6a71f9;
+      padding-right: 20px;
+      font-size: 14px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img class="logo" src="images/logo1.png" alt="">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Category</a></li>
+        </ul>
+      </nav>
+      <img class="cart" src="images/cart.png" alt="">
+    </div>
+    <div class="content">
+      <a class="btn" href="#">2024 collections</a>
+      <h1>You should always<br> feel pretty</h1>
+      <p>Clothes that are sure to heat up your winter.</p>
+      <div class="arrow-icons">
+        <img src="images/back-arrow.png" alt="">
+        <img src="images/next-arrow.png" alt="">
+      </div>
+    </div> <!--content-->
+    <img class="feature-img" src="images/img.png" alt="">
+    <div class="social-links">
+      <a href="#">FACEBOOK</a>
+      <a href="#">INSTAGRAM</a>
+      <a href="#">TWITTER</a>
+    </div>
+  </div>
+</body>
+</html>
