@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glass_card</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+      background-image: url(images/back.png);
+      background-size: cover;
+      background-position: center;
+      /*컨테이너 안쪽의 모든 컨텐츠들을 가운데로 정렬*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card{
+      width: 90%;
+      max-width: 440px;
+      color: #f1f1f1;
+      text-align: center;
+      background-color: rgba(255,255,255,0.2);  /*반투명한 배경색 설정*/
+      padding: 50px 35px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      box-shadow: 0 4px 30 rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px); /*뒷 배경이미지를 흐리게 표현*/
+    }
+    .card img{
+      width: 140px;
+    }
+    .card h2{
+      font-size: 40px;
+      margin-top: 20px;
+    }
+    .card p{
+      font-size: 18px;
+      margin: 10px auto;
+    }
+    /*아이콘 요소*/
+    .card .links img{
+      width: 40px;
+      margin: 10px 5px;
+      border-radius: 50%;
+      transition: gackground 0.5s;  /*배경색이 변경되면 0.5초에 걸쳐 변경됨*/
+    }
+    .card .links img:hover{
+      background: #ff01cf;
+    }
+    /*버튼요소*/
+    .btn{
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 30px;
+      background: white;
+      font-size: 18px;
+      font-weight: 500;
+      color: #ff01cf;
+      border-radius: 30px;
+      margin: 30px 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" data-tilt>
+      <img src="images/profile.png" alt="porfile_img">
+      <h2>John Smith</h2>
+      <p>I'm student. I like to learn coding.</p>
+      <div class="links">
+        <a href="#"><img src="images/facebook.png" alt=""></a>
+        <a href="#"><img src="images/twitter.png" alt=""></a>
+        <a href="#"><img src="images/telegram.png" alt=""></a>
+      </div> <!--links-->
+      <a class="btn" href="#">message me</a>
+    </div> <!--card-->
+  </div>
+
+  <!--vanilla-title 스크립트-->
+  <script src="js/vanilla-tilt.js"></script>
+</body>
+</html>
