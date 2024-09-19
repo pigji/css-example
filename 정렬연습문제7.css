@@ -1,0 +1,68 @@
+/*초기화*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+.container1{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 90px 0; /*위:40px , 좌우:90px 여백 설정*/
+  display: flex;  /*요소 나란히 정렬*/
+  justify-content: space-between; /*양끝에 배치*/
+  align-items: center;  /*가운데정렬*/
+  position: relative; /*유령의 집화*/
+}
+.container1::before{
+  content: "";  /*가짜속성*/
+  display: block;
+  position: absolute; /*공중에 띄움*/
+  width: 430px;
+  height: 340px;
+  background-color: gold;
+  border-radius: 0 40px 40px 0; /*오른쪽 모서리만 둥글게 설정*/
+  top: calc(50% - 170px); /*위치설정*/
+  left: 0;
+  z-index: -1;  /*요소 맨뒤로 배치*/
+}
+.container1 > .thumbs{
+  width: 560px;
+  display: flex;
+  flex-wrap: wrap;  /*줄바꿈*/
+  gap: 20px;  /*items사이 여백 설정*/
+}
+.thumbs > .box > li{
+  width: 270px;
+  height: 320px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 45px 20px;
+}
+.thumbs > .box:nth-child(2){
+  margin-top: 140px;
+}
+
+/*아이콘*/
+.box > li i{  
+  font-size: 40px;
+  color: white;
+}
+/*아이콘이 들어가는 박스*/
+.box > li > .user-icon{
+  width: 70px;
+  height: 70px;
+  background-color: gray;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;  /*아이콘 가운데 위치하도록 설정*/
+  justify-content: center;
+  align-items: center;
+}
+/*첫번째 user-icon*/
+.box:first-child > li:first-child > .user-icon{
+  background-color: lightseagreen;
+}
+
+.container1 > .txt{
+  width: 420px;
+}
