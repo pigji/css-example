@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다운내비 연습문제2</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box; box-sizing: border-box;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    nav{
+      min-width: 1200px;
+      background-color: orange;
+    }
+    .container{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: relative; /* .sub의 넓이를 .container의 넓이만큼 줘야햐기 때문에 position:relative를 설정하였음*/
+    }
+    .logo{
+      font-weight: bold;
+    }
+    .gnb{
+      display: flex;
+    }
+    .gnb > li{
+      margin-left: 80px;
+    }
+    .gnb > li > a{
+      display: block;
+      padding: 10px 0;
+    }
+    .sub{
+      position: absolute; /*공중에 띄움*/
+      width: 100%;
+      background-color: #999;
+      left: 0;
+      padding: 20px;
+      display: none;
+      justify-content: space-between;
+    }
+    .sub .menu a{
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    .sub > .thumbs{
+      display: flex;
+      gap: 20px;  /*item요소의 사이 여백을 설정*/
+    }
+    .sub > .thumbs img{
+      display: block;
+    }
+    
+    /*주메뉴에 마우스를 올리면 서브메뉴가 나타남*/
+    .gnb > li:hover .sub{
+      display: flex;  /*flex로 정렬했기 때문에 block이 아닌 flex를 줌*/
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo"><a href="#">LOGO</a></div>
+      <ul class="gnb">
+        <li>
+          <a href="#">MENU1</a>
+          <div class="sub">
+            <ul class="manu">
+              <li><a href="#">menu1-1</a></li>
+              <li><a href="#">menu1-2</a></li>
+              <li><a href="#">menu1-3</a></li>
+            </ul>
+            <ul class="thumbs">
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+            </ul>
+          </div> <!--sub-->
+        </li>
+        <li>
+          <a href="#">MENU2</a>
+          <div class="sub">
+            <ul class="manu">
+              <li><a href="#">menu2-1</a></li>
+              <li><a href="#">menu2-2</a></li>
+            </ul>
+            <ul class="thumbs">
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+            </ul>
+          </div> <!--sub-->
+        </li>
+        <li>
+          <a href="#">MENU3</a>
+          <div class="sub">
+            <ul class="manu">
+              <li><a href="#">menu3-1</a></li>
+              <li><a href="#">menu3-2</a></li>
+              <li><a href="#">menu3-3</a></li>
+            </ul>
+            <ul class="thumbs">
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+            </ul>
+          </div> <!--sub-->
+        </li>
+        <li>
+          <a href="#">MENU4</a>
+          <div class="sub">
+            <ul class="manu">
+              <li><a href="#">menu4-1</a></li>
+              <li><a href="#">menu4-2</a></li>
+            </ul>
+            <ul class="thumbs">
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+              <li><img src="https://picsum.photos/80" alt=""></li>
+            </ul>
+          </div> <!--sub-->
+        </li>
+      </ul> <!--gnb-->
+    </div> <!--container-->
+  </nav>
+</body>
+</html>

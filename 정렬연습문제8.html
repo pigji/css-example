@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정렬 연습문제8</title>
+
+  <style>
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box; box-sizing: border-box;}
+     ul, li{list-style: none;}
+
+    /*전체영역*/
+    section{
+      width: 100%;
+      min-width: 1200px;
+      height: 760px;
+      background-image: url(bg_image/main.jpg);
+      background-position: center;
+      background-size: cover;
+      color: white;
+    }
+    .container{
+      width: 1200px;
+      margin: 0 auto;
+    }
+    section .title{
+      padding-top: 160px;
+      text-align: center;
+    }
+    .title > h1{
+      font-size: 72px;
+    }
+    .title > p{
+      font-size: 14px;
+      margin: 40px 0 80px;  /*위:40px , 아래:80px 여백설정*/
+    }
+    
+    section .list{
+      display: flex;
+    }
+    .list > li{
+      width: 33.3333%;  /*400px과 같은 넓이*/
+      display: flex;
+      background-color: #333;
+      padding: 40px 10px;
+      gap: 20px;  /*요소사이 여백설정*/
+      position: relative;
+    }
+    .list > li > .txt >  h2{
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .list > li > .txt >  p{
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    /*마우스 이벤트 효과*/
+    .list > li:hover{
+      background-color: #999;
+      color: #111;
+      cursor: pointer;
+    }
+
+    /*가상요소*/
+    .list > li:hover::before{
+      content: "";
+      position: absolute;
+      width: 0; height: 0;
+      border: 10px solid transparent;
+      border-bottom-color: #999;
+      top: -20px;
+      left: calc(50% - 10px);
+    }
+    
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="title">
+        <h1>Division Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+          Magnam omnis fugit assumenda. Placeat, quos.
+        </p>
+      </div>
+      <ul class="list">
+        <li>
+          <img src="https://picsum.photos/180/120" alt="">
+          <div class="txt">
+            <h2>DESCRIPTION</h2>
+             <p>
+              Perferendis sint dolor eos omnis repellendus maiores magni,
+              animi a, quaerat reprehenderit itaque beatae, debitis placeat
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="https://picsum.photos/180/120" alt="">
+          <div class="txt">
+            <h2>DESCRIPTION</h2>
+            <p>
+              Perferendis sint dolor eos omnis repellendus maiores magni,
+              animi a, quaerat reprehenderit itaque beatae, debitis placeat
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="https://picsum.photos/180/120" alt="">
+          <div class="txt">
+            <h2>DESCRIPTION</h2>
+            <p>
+              Perferendis sint dolor eos omnis repellendus maiores magni,
+              animi a, quaerat reprehenderit itaque beatae, debitis placeat
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
