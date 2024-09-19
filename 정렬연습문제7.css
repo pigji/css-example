@@ -3,6 +3,9 @@
 ul, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 
+section{width: 1200px; margin: 0 auto; overflow: hidden;}
+
+/*상단부분 : container*/
 .container1{
   width: 1200px;
   margin: 0 auto;
@@ -58,11 +61,122 @@ a{text-decoration: none; color: inherit;}
   justify-content: center;
   align-items: center;
 }
-/*첫번째 user-icon*/
+/*1번째 user-icon*/
 .box:first-child > li:first-child > .user-icon{
   background-color: lightseagreen;
 }
+/*2번째 user-icon*/
+.box:first-child > li:last-child > .user-icon{
+  background-color: gold;
+}
+/*3번째 user-icon*/
+.box:last-child > li:first-child > .user-icon{
+  background-color: dodgerblue;
+}
+/*4번째 user-icon*/
+.box:last-child > li:last-child > .user-icon{
+  background-color: tomato;
+}
+.box > li > h2{
+  font-size: 18px;
+  margin: 25px 0;
+}
+.box > li > p{
+  font-size: 14px;
+}
 
+/*오른쪽 텍스트 요소*/
 .container1 > .txt{
   width: 420px;
+}
+.container1 > .txt > h1{
+  font-size: 60px;
+  letter-spacing: -2px; /*(-)값으로 자간 좁히기*/
+  line-height: 1.1;
+}
+.container1 > .txt > h1 > b{
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #666;
+  font-weight: normal;  /*글씨 얇게 설정*/
+}
+.container1 > .txt > p{
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin: 20px 0 40px;
+}
+
+/*버튼 요소*/
+.container1 > .txt > button{
+  width: 160px;
+  height: 50px;
+  font-size: 18px;
+  border: 0;
+  background-color: #111;
+  color: white;
+}
+
+/*하단부분 : container2*/
+.container2{
+  width: 1200px;
+  margin: 220px auto 0;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0 110px;
+  position: relative;
+  /*outline: 2px solid red; 영역확인용*/
+}
+.container2 > .txt{
+  width: 490px;
+  padding: 0 20px;
+}
+.container2 > .txt > h1{
+  font-size: 50px;
+  line-height: 1.1;
+}
+.container2 > .txt > p{
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0 40px;
+  color: #666;
+}
+.container2 > .txt > i{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+.container2 > .txt > a{
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+/*노란색배경 가짜속성*/
+.container2::before{
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 160px;
+  background-color: gold;
+  top: calc(50% - 65px);  /*위치설정*/
+  left: 0;
+  z-index: -1;
+}
+.container2::after{
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background-color: gold;
+  border-radius: 50%;
+  top: -240px;
+  right: -40px;
+  z-index: -1;
+}
+.largeImg{
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
