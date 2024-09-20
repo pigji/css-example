@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+
+    .container{
+      width: 1200px;
+      height: 80px;
+      margin: 0 auto;
+      font-family: "맑은 고딕";
+      font-size: 14px;
+    }
+    .list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+    .list > ul{
+      display: flex;
+      font-weight: bold;
+      margin: 0 30px;
+    }
+    .list > ul > li{
+      padding-left: 40px;
+    }
+    .list img{
+      width: 70px;
+      height: 70px;
+      padding: 0 170px;
+    }
+    /*마우스이벤트 효과*/
+    .list li:hover, .list img:hover{
+      color: pink;
+    }
+
+    /*---- 강사님st --------------------------------------*/
+    nav{
+      width: 1200px;
+      margin: 0 auto;
+      outline: 1px solid #999;
+    }
+    nav > ul{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30px;
+      box-sizing: border-box;
+      gap: 40px;
+    }
+    nav > ul > li:nth-of-type(4){
+      flex: 1;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="list">
+      <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+      </ul>
+      <img src="images/코끼리logo.png" alt="">
+      <ul>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <!--강사님st 코드-->
+  <nav>
+    <ul>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">NEWS</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#"><img src="images/코끼리logo.png" alt="" width="150"></a></li>
+      <li><a href="#">BOARD</a></li>
+      <li><a href="#">ALBUM</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
